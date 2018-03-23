@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77B47A0F-8124-4C22-9C0E-BD90F19A0C1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Deloitte.PipelineFramework</RootNamespace>
+    <AssemblyName>Deloitte.PipelineFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Deloitte.PipelineFramework.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Deloitte.PipelineFramework.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Deloitte.PipelineFramework.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.SqlServer.ManagedDTS.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\Microsoft.SqlServer.ScriptTask.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Newtonsoft.Json\v4.0_9.0.0.0__30ad4fe6b2a6aeed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeloitteScript.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="HttpRequestCrcCheck.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="PayloadTypes\LandscapeNodeMarker.cs" />
+    <Compile Include="Pipelines\ExpandCompanyList.cs" />
+    <Compile Include="Pipelines\ImportMatchingSoftwareFiles.cs" />
+    <Compile Include="Pipelines\LoadTechnologyScoresDatamart.cs" />
+    <Compile Include="Pipelines\RefreshTechnologyScores.cs" />
+    <Compile Include="Pipelines\RefreshDealScores.cs" />
+    <Compile Include="Pipelines\RefreshTopicScores.cs" />
+    <Compile Include="Pipelines\PublishAdditionalDocuments.cs" />
+    <Compile Include="Pipelines\LoadTopicScoresDatamart.cs" />
+    <Compile Include="Pipelines\LoadDealScoresDatamart.cs" />
+    <Compile Include="Pipelines\PublishTopicScoresDatamart.cs" />
+    <Compile Include="Pipelines\GeneratePeerGroupData.cs" />
+    <Compile Include="Pipelines\ScoreRiskText.cs" />
+    <Compile Include="Pipelines\GetCompanyProfileInLandscape.cs" />
+    <Compile Include="Pipelines\GetKeywordProfileForConfiguration.cs" />
+    <Compile Include="Pipelines\GetKeywordProfileInLandscape.cs" />
+    <Compile Include="Pipelines\End2EndTest.cs" />
+    <Compile Include="Pipelines\ClassifyCompanies.cs" />
+    <Compile Include="Pipelines\GetKeywordProfile.cs" />
+    <Compile Include="Pipelines\CreateUserStats.cs" />
+    <Compile Include="Pipelines\EugfSla.cs" />
+    <Compile Include="Pipelines\EugfLandscape.cs" />
+    <Compile Include="Pipelines\EugfLonglist.cs" />
+    <Compile Include="Pipelines\PipelineNames.cs" />
+    <Compile Include="PlatformConfig\ComponentParam.cs" />
+    <Compile Include="PlatformConfig\ConfigHeader.cs" />
+    <Compile Include="PlatformConfig\DeloitteObject.cs" />
+    <Compile Include="PlatformConfig\Enums\CompanyRetrievalType.cs" />
+    <Compile Include="PlatformConfig\Enums\CompanyScoreGroupingType.cs" />
+    <Compile Include="PlatformConfig\Enums\CompanyScoringType.cs" />
+    <Compile Include="PlatformConfig\Enums\CompanyEntityType.cs" />
+    <Compile Include="PlatformConfig\Enums\DealType.cs" />
+    <Compile Include="PlatformConfig\Enums\ProfileType.cs" />
+    <Compile Include="PlatformConfig\Enums\CompanySelectionType.cs" />
+    <Compile Include="PlatformConfig\Enums\DealStatus.cs" />
+    <Compile Include="PlatformConfig\Enums\DocumentSelectionType.cs" />
+    <Compile Include="PlatformConfig\Enums\SubjectTreeType.cs" />
+    <Compile Include="PlatformConfig\Enums\SecParagraphTables.cs" />
+    <Compile Include="PlatformConfig\Enums\ProjectType.cs" />
+    <Compile Include="PlatformConfig\Enums\DebugRunId.cs" />
+    <Compile Include="PlatformConfig\Enums\MdsAlgorithm.cs" />
+    <Compile Include="PlatformConfig\Enums\NodePropertyMethod.cs" />
+    <Compile Include="PlatformConfig\Enums\NodeScoringType.cs" />
+    <Compile Include="PlatformConfig\Enums\NodeSelectionType.cs" />
+    <Compile Include="PlatformConfig\Enums\PackageName.cs" />
+    <Compile Include="PlatformConfig\Params\ClassProfileParam.cs" />
+    <Compile Include="PlatformConfig\Params\ImportProjectScoreTableParams.cs" />
+    <Compile Include="PlatformConfig\Params\CreatePrepareEnvironmentParams.cs" />
+    <Compile Include="PlatformConfig\Params\ImportMatchingSoftwareFileParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadCalendarParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadDealsParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadDocumentsParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadCountriesParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadSubjectScoreSourcesParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadTechnologyScoresParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadSubjectTreeParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadSubjectScoresParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadDealScoresParams.cs" />
+    <Compile Include="PlatformConfig\Params\MakeCompanySuggestionParam.cs" />
+    <Compile Include="PlatformConfig\Params\RefreshWebDataParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadParagraphsParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadIndustriesParams.cs" />
+    <Compile Include="PlatformConfig\Params\LoadCompaniesParams.cs" />
+    <Compile Include="PlatformConfig\Params\ScoreRiskTextParams.cs" />
+    <Compile Include="PlatformConfig\Params\CreateStatsParams.cs" />
+    <Compile Include="PlatformConfig\Params\GetNodePropertiesParam.cs" />
+    <Compile Include="PlatformConfig\Params\KeywordProfileParam.cs" />
+    <Compile Include="PlatformConfig\Params\NodeSelectionParam.cs" />
+    <Compile Include="PlatformConfig\Params\RetrievalParam.cs" />
+    <Compile Include="PlatformConfig\Params\ScoreLandscapeNodesParam.cs" />
+    <Compile Include="PlatformConfig\Params\AnswerParam.cs" />
+    <Compile Include="PlatformConfig\Params\ScoringParam.cs" />
+    <Compile Include="PlatformConfig\Root.cs" />
+    <Compile Include="PlatformConfig\Sla.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Deloitte.PipelineFramework.snk" />
+    <None Include="GACInstall.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+{"ComponentID": "D0E4F952-663C-42CA-89E8-318C931D42A9"
+  , "RunID": "-1"
+  , "PollEvery": "00:00:10"
+  , "TimeOutAfter": "3600"
+  , "PlatformDataSource": "DEPLOYMENT_SERVER"
+  , "PlatformCatalog": "prv_dev_inh"
+  , "DatahandlerDataSource": "DEPLOYMENT_SERVER"
+  , "DatahandlerCatalog": "prv_dev_dth"
+  , "DatahandlerVersion": "latest"
+  , "ProjectDataSource":"DEPLOYMENT_SERVER"
+  , "ProjectCatalog":"prv_prj_deploytest"
+}

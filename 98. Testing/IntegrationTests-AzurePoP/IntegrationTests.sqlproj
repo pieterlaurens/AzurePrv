@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>IntegrationTests</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{d9c0c7e9-5a01-4ed1-9335-bd55ee1e2fbb}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>IntegrationTests</RootNamespace>
+    <AssemblyName>IntegrationTests</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Scenarios" />
+    <Folder Include="Configurations" />
+    <Folder Include="Other" />
+    <Folder Include="WebshopFocusReports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Other\CompareDataHandlers.sql" />
+    <Build Include="Other\DeploymentSucceeded.sql" />
+    <Build Include="Other\DeploymentSucceeded_MatlabExport.sql" />
+    <Build Include="Other\DeploymentSucceeded_org.sql" />
+    <Build Include="Other\Engine_GetKeywordProfile_startAPI.sql" />
+    <Build Include="Other\EngineDemo_Landscape_startAPI.sql" />
+    <Build Include="Other\EngineDemo_Longlist_startAPI.sql" />
+    <Build Include="Other\EquipAM_CreateLonglistAndLandscape.sql" />
+    <Build Include="Other\EquipAM_ManualScores_startAPI.sql" />
+    <Build Include="Other\EquipAM_RescoreLandscape_startAPI.sql" />
+    <Build Include="Other\IDR_ImportMatchingSoftwareFiles_startAPI.sql" />
+    <Build Include="Other\Impact_AddScore_startAPI.sql" />
+    <Build Include="Other\Impact_GenerateMatlab_startAPI.sql" />
+    <Build Include="Other\Impact_Landscape_startAPI.sql" />
+    <Build Include="Other\Impact_ManualScores_Annotation.sql" />
+    <Build Include="Other\ImpactInvesting_DevelopmentLonglist.sql" />
+    <Build Include="Other\ImpactInvesting_ProjectLonglist.sql" />
+    <Build Include="Other\TestScripts_CreateLonglistForCorrection.sql" />
+    <Build Include="Other\TestScripts_EquipLonglistAndLandscape.sql" />
+    <Build Include="Other\TestScripts_LandscapeForClientProjects.sql" />
+    <Build Include="Other\TestScripts_MakeJsonString.sql" />
+    <Build Include="Other\TestScripts_RecalculateLandscape.sql" />
+    <Build Include="Other\TestScripts_SynchronousScoring.sql" />
+    <Build Include="Other\DeploymentSucceeded_CompanySuggestion.sql" />
+    <None Include="WebshopFocusReports\GovernanceBox_GeneratePeerGroupData_startAPI.sql" />
+    <None Include="WebshopFocusReports\GovernanceBox_LoadTechnologyScoresDatamart_startAPI.sql" />
+    <None Include="WebshopFocusReports\GovernanceBox_LoadDealScoresDatamart_startAPI.sql" />
+    <None Include="WebshopFocusReports\GovernanceBox_LoadTopicScoresDatamart_startAPI.sql" />
+    <None Include="WebshopFocusReports\GovernanceBox_PublishAdditionalDocuments_startAPI.sql" />
+    <None Include="WebshopFocusReports\GovernanceBox_PublishTopicScoresDatamart_startAPI.sql" />
+    <None Include="WebshopFocusReports\GovernanceBox_RefreshTopicScores_startAPI.sql" />
+    <None Include="WebshopFocusReports\GovernanceBox_RefreshTechnologyScores_startAPI.sql" />
+    <None Include="WebshopFocusReports\GovernanceBox_RefreshDealScores_startAPI.sql" />
+    <None Include="Scenarios\DeploymentSucceeded_Backtesting.sql" />
+    <None Include="Scenarios\DeploymentSucceeded_ComprehensiveBacktesting.sql" />
+    <None Include="Scenarios\DeploymentSucceeded_ComprehensiveLonglist.sql" />
+    <None Include="Scenarios\DeploymentSucceeded_KeywordProfile.sql" />
+    <None Include="Scenarios\DeploymentSucceeded_Landscape.sql" />
+    <None Include="Scenarios\DeploymentSucceeded_Longlist.sql" />
+    <None Include="Scenarios\DeploymentSucceeded_Matlab.sql" />
+    <None Include="Scenarios\DeploymentSucceeded_Questionnaire.sql" />
+    <None Include="Scenarios\DeploymentSucceeded_UpdateScoreTable.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Other\equipAm_Landscape_FullConfig.json" />
+    <None Include="Other\equipAm_Longlist_FullConfig.json" />
+    <None Include="Other\equipScoringConfig.json" />
+    <None Include="Configurations\TestDeployBacktesting.json" />
+    <None Include="Configurations\TestDeployComprehensiveBacktesting.json" />
+    <None Include="Configurations\TestDeployComprehensiveLonglist.json" />
+    <None Include="Configurations\TestDeployKeywordProfile.json" />
+    <None Include="Configurations\TestDeployLandscape.json" />
+    <None Include="Configurations\TestDeployLonglist.json" />
+    <None Include="Configurations\TestDeployMatlabExport.json" />
+    <None Include="Configurations\TestDeploySla.json" />
+    <None Include="Configurations\TestDeployStoreAnswer.json" />
+    <None Include="Configurations\TestDeployUpdateScoreTable.json" />
+  </ItemGroup>
+</Project>

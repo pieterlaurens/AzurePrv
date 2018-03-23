@@ -1,0 +1,39 @@
+{
+"ScoringParams" : [
+	{
+	"ScoringType" : "ManualScore"
+	, "ScoringLabel" : "Value Chain Position"
+	, "ScoreDataType" : "nvarchar"
+	, "CompanyScore" : "GB00446897:Processing|US126166035L:Processing|NL14076998:Formulation|GB00305979:Printing"
+	}, {
+	"ScoringType" : "CompanyTextBagOfWords"
+	, "ScoringLabel" : "Plastics Manufacturing"
+	, "Normalize" : "Portfolio"
+	, "BagOfWords" : "Plastic|Thermoplastic"
+	}, {
+	"ScoringType" : "OrbisAttribute"
+	, "ScoringLabel" : "Country"
+	, "AttributeName" : "country"
+	},{
+	"ScoringType" : "OrbisTemporalAttribute"
+	, "ScoringLabel" : "Revenue"
+	, "AttributeName" : "revenue"
+	, "TimeRange" : "2010-2015"
+	, "TimeAttribute" : "y"
+	, "TimeAttributeType" : "int"
+	},{
+	"ScoringType" : "OrbisAttribute"
+	, "ScoringLabel" : "Number of Patents"
+	, "AttributeName" : "number_of_patents"
+	},{
+	"ScoringType" : "OrbisAggregateAttribute"
+	, "ScoringLabel" : "Number of Acquisitions"
+	, "AttributeName" : "number_of_acquisitions"
+	},{
+	"ScoringType" : "PatentClassProfile"
+	, "ScoringLabel" : "Shaping or Joining of Plastics"
+	, "Normalize" : "Portfolio"
+	, "ClassProfile" : "B29C 00/00:0.5|B29C 31/00:0.5"
+	}
+]
+}

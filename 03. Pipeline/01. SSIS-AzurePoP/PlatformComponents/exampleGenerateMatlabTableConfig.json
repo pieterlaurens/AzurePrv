@@ -1,0 +1,6 @@
+{
+	"YearSpan":"2010-2015"
+	, "Financials":"employees|revenue"
+	, "FinancialRatios":"profit_margin"
+	, "IpMetrics":"citations|citations_per_age_year"
+}

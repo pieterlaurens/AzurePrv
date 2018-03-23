@@ -1,0 +1,24 @@
+{
+"RetrievalParams" : [
+	{"RetrievalType" : "CompanyTextBagOfWords"
+	, "RetrievalLabel" : "Plastics Manufacturing"
+	, "NumberOfCompanies" : 3
+	, "Normalize" : "Portfolio"
+	, "BagOfWords" : "Plastic|Thermoplastic"
+	, "Constraints" : "company_category:Medium sized company|country:NL,BE,DE,FR,GB,ES,IT"
+	}, {
+	"RetrievalType" : "CompanyList"
+	, "RetrievalLabel" : "Required companies"
+	, "CompanyId" : "GB00446897|US126166035L|NL14076998|GB00305979|NONEXISTENT"
+	},{
+	"RetrievalType" : "PatentClassProfile"
+	, "RetrievalLabel" : "Shaping or Joining of Plastics"
+	, "NumberOfCompanies" : 3
+	, "Normalize" : "Portfolio"
+	, "ClassProfile" : "B29C 00/00:0.5|B29C 31/00:0.5"
+	, "Constraints" : "company_category:Medium sized company|country:NL,BE,DE,FR,GB,ES,IT"
+	}
+]
+}
+
+

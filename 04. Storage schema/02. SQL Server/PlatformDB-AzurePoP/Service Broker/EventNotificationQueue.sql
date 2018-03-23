@@ -1,0 +1,2 @@
+﻿CREATE QUEUE [nlh].[EventNotificationQueue];
+

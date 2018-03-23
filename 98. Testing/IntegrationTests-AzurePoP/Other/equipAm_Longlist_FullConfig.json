@@ -1,0 +1,94 @@
+{"ComponentParams" : [ 
+						{ }
+						, {"RetrievalParams" : [
+								{"RetrievalType" : "CompanyTextBagOfWords"
+									, "RetrievalLabel" : "AM in TD"
+									, "NumberOfCompanies" : 50
+									, "Normalize" : "Portfolio"
+									, "BagOfWords" : "additive manuf*|3d print*"
+									, "Constraints" : ""
+								}
+								, { "RetrievalType" : "PatentClassProfile"
+									, "RetrievalLabel" : "CPC - 3D Printing"
+									, "NumberOfCompanies" : 50
+									, "Normalize" : "Portfolio"
+									, "ClassProfile" : "A61C 13/0013:0.0263158|A61C 13/0019:0.0714286|B29C 67/0051:0.101852|B29C 67/0055:0.118367|B29C 67/0059:0.151961|B29C 67/0062:0.0584795|B29C 67/007:0.0201342|B29C 67/0074:0.0284091|B29C 67/0081:0.0941176|B29C 67/0085:0.105691|B29C 67/0088:0.209632|B29C 67/0092:0.0432432|B29C 67/0096:0.0649351|B33Y 80/00:0.207207|B33Y 70/00:0.163636|B33Y 30/00:0.14|B28B 01/001:0.0958084|G03B 35/14:0.108434|B22F 03/008:0.0514706|C04B /6026:0.02"
+									, "Constraints" : ""
+								}
+								, { "RetrievalType" : "PatentClassProfile"
+									, "RetrievalLabel" : "CPC - AM"
+									, "NumberOfCompanies" : 50
+									, "Normalize" : "Portfolio"
+									, "ClassProfile" : "A61F /30962:0.0860215|B22F 03/008:0.176471|B22F /1056:0.132184|B22F /1057:0.235849|B22F /1058:0.323529|B22F /1059:0.205882|B22F 05/009:0.125|B22F 05/04:0.127273|B28B 01/001:0.11976|B29C 67/0051:0.12963|B29C 67/0055:0.138776|B29C 67/0077:0.117318|B29C 67/0085:0.184282|B29C 67/0088:0.164306|B33Y 30/00:0.22|B33Y 70/00:0.127273|B33Y 80/00:0.297297|B23K 15/0086:0.149068|F16C /46:0.0869565|F05D /22:0.0972222"
+									, "Constraints" : ""
+								}
+								, { "RetrievalType" : "PatentClassProfile"
+									, "RetrievalLabel" : "CPC - SLS"
+									, "NumberOfCompanies" : 50
+									, "Normalize" : "Portfolio"
+									, "ClassProfile" : "A61C 13/0018:0.0235294|A61F /30962:0.0215054|B22F 03/004:0.0266667|B22F 03/008:0.0367647|B22F /1056:0.0545977|B22F /1057:0.0566038|B22F /1059:0.0588235|B23K 15/0086:0.0248447|B23K 26/34:0.0202703|B28B 01/001:0.0359281|B29C 67/0051:0.0162037|B29C 67/0077:0.0927374|B29C 67/0096:0.038961|B29C 67/04:0.0248447|B33Y 80/00:0.018018|C04B /6026:0.06|C04B /665:0.0642857|F16C /46:0.0434783|G05B 19/4099:0.017284|G05B /49018:0.24"
+									, "Constraints" : ""
+								}
+								, { "RetrievalType" : "PatentClassProfile"
+									, "RetrievalLabel" : "CPC - AM Specific"
+									, "NumberOfCompanies" : 50
+									, "Normalize" : "Portfolio"
+									, "ClassProfile" : "B33Y 30/00:0.32|B33Y 70/00:0.254545|B33Y 80/00:0.423423"
+									, "Constraints" : ""
+								}
+							]
+							}
+						, { "ScoringParams" : [
+								{"ScoringType" : "OrbisAttribute"
+								, "ScoringLabel" : "Country"
+								, "AttributeName" : "country"
+								},{
+								"ScoringType" : "OrbisAttribute"
+								, "ScoringLabel" : "Independence"
+								, "AttributeName" : "independence_indicator"
+								},{
+								"ScoringType" : "OrbisAttribute"
+								, "ScoringLabel" : "Year of Incorporation"
+								, "AttributeName" : "yoi"
+								},{
+								"ScoringType" : "OrbisAttribute"
+								, "ScoringLabel" : "Industry code"
+								, "AttributeName" : "industry_code"
+								},{
+								"ScoringType" : "OrbisAttribute"
+								, "ScoringLabel" : "Number of Patents"
+								, "AttributeName" : "number_of_patents"
+								},{
+								"ScoringType" : "OrbisAttribute"
+								, "ScoringLabel" : "GUO"
+								, "AttributeName" : "guo_name"
+								},{
+								"ScoringType" : "CompanyTextBagOfWords"
+								, "ScoringLabel" : "Business - AM"
+								, "Normalize" : "Portfolio"
+								, "BagOfWords" : "additive manuf*|3d print*"
+								},{
+								"ScoringType" : "PatentClassProfile"
+								, "ScoringLabel" : "IP - 3D Printing"
+								, "Normalize" : "Portfolio"
+								, "ClassProfile" : "A61C 13/0013:0.0263158|A61C 13/0019:0.0714286|B29C 67/0051:0.101852|B29C 67/0055:0.118367|B29C 67/0059:0.151961|B29C 67/0062:0.0584795|B29C 67/007:0.0201342|B29C 67/0074:0.0284091|B29C 67/0081:0.0941176|B29C 67/0085:0.105691|B29C 67/0088:0.209632|B29C 67/0092:0.0432432|B29C 67/0096:0.0649351|B33Y 80/00:0.207207|B33Y 70/00:0.163636|B33Y 30/00:0.14|B28B 01/001:0.0958084|G03B 35/14:0.108434|B22F 03/008:0.0514706|C04B /6026:0.02"
+								},{
+								"ScoringType" : "PatentClassProfile"
+								, "ScoringLabel" : "IP - AM"
+								, "Normalize" : "Portfolio"
+								, "ClassProfile" : "A61F /30962:0.0860215|B22F 03/008:0.176471|B22F /1056:0.132184|B22F /1057:0.235849|B22F /1058:0.323529|B22F /1059:0.205882|B22F 05/009:0.125|B22F 05/04:0.127273|B28B 01/001:0.11976|B29C 67/0051:0.12963|B29C 67/0055:0.138776|B29C 67/0077:0.117318|B29C 67/0085:0.184282|B29C 67/0088:0.164306|B33Y 30/00:0.22|B33Y 70/00:0.127273|B33Y 80/00:0.297297|B23K 15/0086:0.149068|F16C /46:0.0869565|F05D /22:0.0972222"
+								},{
+								"ScoringType" : "PatentClassProfile"
+								, "ScoringLabel" : "IP - SLS"
+								, "Normalize" : "Portfolio"
+								, "ClassProfile" : "A61C 13/0018:0.0235294|A61F /30962:0.0215054|B22F 03/004:0.0266667|B22F 03/008:0.0367647|B22F /1056:0.0545977|B22F /1057:0.0566038|B22F /1059:0.0588235|B23K 15/0086:0.0248447|B23K 26/34:0.0202703|B28B 01/001:0.0359281|B29C 67/0051:0.0162037|B29C 67/0077:0.0927374|B29C 67/0096:0.038961|B29C 67/04:0.0248447|B33Y 80/00:0.018018|C04B /6026:0.06|C04B /665:0.0642857|F16C /46:0.0434783|G05B 19/4099:0.017284|G05B /49018:0.24"
+								},{
+								"ScoringType" : "PatentClassProfile"
+								, "ScoringLabel" : "IP - Specific AM"
+								, "Normalize" : "Portfolio"
+								, "ClassProfile" : "B33Y 30/00:0.32|B33Y 70/00:0.254545|B33Y 80/00:0.423423"
+								}
+							]
+							}
+						, { }
+						 ]}

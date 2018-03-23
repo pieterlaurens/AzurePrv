@@ -1,0 +1,44 @@
+{ "ScoreLandscapeNodesParams" :[
+	{
+	"ScoringType" : "CompanyPortfolio"
+	, "ScoreGroup" : "Relevance"
+	, "SeriesGroup" : "Relevant Companies"
+	, "Normalize" : "None"
+	, "CompanyId" : "GB00446897|US126166035L|NL14076998|US510014090|GB00218019|NONEXISTENT"
+	},{
+	"ScoringType" : "CompanyPortfolio"
+	, "ScoreGroup" : "Weight"
+	, "SeriesGroup" : "Relevant Companies"
+	, "Normalize" : "Portfolio"
+	, "CompanyId" : "GB00446897|US126166035L|NL14076998|US510014090|GB00218019|NONEXISTENT"
+	},{
+	"ScoringType" : "BagOfWords"
+	, "ScoringLabel" : "Shaping or Joining of Plastics"
+	, "ScoreGroup" : "Weight"
+	, "SeriesGroup" : "Strategic area"
+	, "Normalize" : "Portfolio"
+	, "BagOfWords" : "plastic|thermoplastic|thermoforming"
+	},{
+	"ScoringType" : "BagOfWords"
+	, "ScoringLabel" : "Shaping or Joining of Plastics"
+	, "ScoreGroup" : "Relevance"
+	, "SeriesGroup" : "Strategic area"
+	, "Normalize" : "None"
+	, "BagOfWords" : "plastic|thermoplastic|thermoforming"
+	},{
+	"ScoringType" : "CompanyPortfolioBagOfWords"
+	, "ScoreGroup" : "Relevance"
+	, "SeriesGroup" : "Relevant Companies BOW"
+	, "Normalize" : "None"
+	, "CompanyId" : "GB00446897|US126166035L|NL14076998|US510014090|GB00218019|NONEXISTENT"
+	, "BagOfWords" : "plastic|thermoplastic|thermoforming"
+	},{
+	"ScoringType" : "CompanyPortfolioBagOfWords"
+	, "ScoreGroup" : "Weight"
+	, "SeriesGroup" : "Relevant Companies BOW"
+	, "Normalize" : "Portfolio"
+	, "CompanyId" : "GB00446897|US126166035L|NL14076998|US510014090|GB00218019|NONEXISTENT"
+	, "BagOfWords" : "plastic|thermoplastic|thermoforming"
+	}	
+	]
+}

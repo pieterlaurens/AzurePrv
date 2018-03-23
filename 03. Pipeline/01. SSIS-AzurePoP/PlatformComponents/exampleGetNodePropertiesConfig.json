@@ -1,0 +1,16 @@
+{ "GetNodePropertiesParams" :[
+	{"PropertyLabel" : "Label"
+	, "PropertyMethod" : "TechnologyClassLabel"
+	},{"PropertyLabel" : "Extended Label"
+	, "PropertyMethod" : "TechnologyClassExtendedLabel"
+	},{"PropertyLabel" : "Size"
+	, "PropertyMethod" : "TechnologyClassSize"
+	},{"PropertyLabel" : "Technology Class"
+	, "PropertyMethod" : "NodeId"
+	},{"PropertyLabel" : "Trend"
+	, "PropertyMethod" : "TechnologyTrendRelativeToLandscape"
+	},{"PropertyLabel" : "High Level Label"
+	, "PropertyMethod" : "HighLevelTechnologyLabel"
+	, "PropertyParameters" : "H04:Software|G06:Software|B41:Printing|B42:Printing|B43:Printing|B44:Printing|C09:Inks and Dyes|C07:Raw material|C08:Raw material|C2:Raw material|B2:Finished part|B33:Additive manufacturing"
+	}
+] }

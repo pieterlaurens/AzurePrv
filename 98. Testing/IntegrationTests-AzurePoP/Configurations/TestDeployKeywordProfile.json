@@ -1,0 +1,18 @@
+{"Header":{
+	"SsisApiRunId":1,"NameOfApi":"GetKeywordProfile",
+	"Creator":"pbaljon@deloitte.nl",
+	"ConfigurationDescription":"Integration testing scenario - Additive manufacturing keyword profile",
+	"ConfigurationVersion":""
+},"ComponentParams" : [
+  {
+    "PackageName": "GetKeywordProfile",
+    "GetKeywordProfileParams": {
+      "BagOfWords": "additive~manufacturing",
+      "NumberOfClasses": 1500,
+      "ScopeToProject": true,
+      "MinimalClassSize": 0,
+      "ProfileType": "BowToCpc",
+      "StoreInProject":true
+    }
+  }
+]}

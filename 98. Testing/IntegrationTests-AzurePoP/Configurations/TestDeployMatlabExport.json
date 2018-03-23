@@ -1,0 +1,10 @@
+{"Header":{
+	"NameOfApi":"PublishMatlabResources",
+	"Creator":"orakic@deloitte.nl",
+	"ConfigurationDescription":"Integration testing scenario - Create the Matlab output tables",
+	"ConfigurationVersion":""
+},"ComponentParams" : [ 
+{
+	"PackageName":"GenerateMatlabTable"
+}
+]}

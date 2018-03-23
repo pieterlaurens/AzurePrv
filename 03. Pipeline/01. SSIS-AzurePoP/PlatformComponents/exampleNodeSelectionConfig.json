@@ -1,0 +1,6 @@
+{ "NodeSelectionParams" :[
+	{"NodeSelectionType" : "NodeList"
+	, "NodeSelectionLabel" : "Example list of Nodes"
+	, "NodeList" : "B32B 27/00|B29C 66/71"
+	}
+] }

@@ -1,0 +1,74 @@
+{
+  "Header": {
+    "NameOfApi": "AnswerQuestion",
+    "Creator": "pbaljon@deloitte.nl",
+	  "ConfigurationDescription":"Integration testing scenario - Storing several answers (pre arranged in project)",
+  },
+  "ComponentParams": [
+    {
+      "PackageName": "StoreAnswer",
+      "AnswerParams": [
+        {
+          "CompanyId": "AB1234",
+          "QuestionName": "Q001 Why is it suitable",
+          "QuestionId": 1,
+          "Answer": "Because it is; just so awesome",
+          "Reference": "www.testcompany.nl",
+          "Comment": "Test"
+        },
+        {
+          "CompanyId": "AB1234",
+          "QuestionName": "Q004 Life meaning",
+          "QuestionId": 4,
+          "Answer": "",
+          "Reference": "",
+          "Comment": ""
+        },
+        {
+          "CompanyId": "AB1234",
+          "QuestionName": "Q002 Segment",
+          "QuestionId": 2,
+          "Reference": "",
+          "CheckedAnswers": [
+            {
+              "Id": 2,
+              "Value": "Mid-cap",
+              "Reference": "www.testcompany.nl"
+            }
+          ]
+        },
+        {
+          "CompanyId": "AB1234",
+          "QuestionName": "Q003 Industries",
+          "QuestionId": 3,
+          "Answer": "",
+          "CheckedAnswers": [
+            {
+              "Id": 4,
+              "Value": "Sustainable construction",
+              "Reference": "www.testcompany.nl"
+            },
+            {
+              "Id": 7,
+              "Value": "Water engineering",
+              "Reference": "www.testcompany.nl"
+            },
+            {
+              "Id": 5,
+              "Value": "Renewable energy",
+              "Reference": "http://www.testcompany.nl/upcoming/building_windmills"
+            }
+          ]
+        },
+        {
+          "CompanyId": "AB1234",
+          "QuestionName": "Q001 Why is it suitable",
+          "QuestionId": 1,
+          "Comment": "Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome Because it is just so awesome  Because it is just so awesome  Because it is just so awesome",
+          "Reference": "www.testcompany.nl/test",
+          "Answer": "Petes bike was stolen; he exclaimed !@#$%^&|*() and \"borrowed\" another. An/d what about a \\ a newline character \n or &amp; sign, or two double quotes:\"\""
+        }
+      ]
+    }
+  ]
+}

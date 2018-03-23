@@ -1,0 +1,15 @@
+{
+  "Header": {
+    "NameOfApi": "UpdateScoreTable",
+    "Creator": "pbaljon@deloitte.nl",
+	  "ConfigurationDescription":"Integration testing scenario - Loading the SDI Excel as it was for midcap",
+  },
+  "ComponentParams": [
+    {
+      "PackageName": "ImportProjectScoreTable",
+      "ImportProjectScoreTableParams": {
+        "ExcelPath": "f:\\SDImapping_unverified_with_client.xlsx"
+      }
+    }
+  ]
+}

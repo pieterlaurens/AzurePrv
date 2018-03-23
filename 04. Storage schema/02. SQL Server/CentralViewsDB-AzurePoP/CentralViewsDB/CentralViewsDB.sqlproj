@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CentralViewsDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b49b7830-2e8d-4a2b-8c7c-4d1afefc1a72}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CentralViewsDB</RootNamespace>
+    <AssemblyName>CentralViewsDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="latest" />
+    <Folder Include="volpe" />
+    <Folder Include="volpe\Table-Valued Functions" />
+    <Folder Include="volpe\Views" />
+    <Folder Include="volpe\Scalar-Valued Functions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="latest\latest.sql" />
+    <Build Include="latest\latest_views.sql" />
+    <Build Include="latest\latest_functions.sql" />
+    <Build Include="volpe\Table-Valued Functions\ufn_company_calendar_attribute_numeric.sql" />
+    <Build Include="volpe\Table-Valued Functions\ufn_company_text.sql" />
+    <Build Include="volpe\Table-Valued Functions\ufn_company_text_topic.sql" />
+    <Build Include="volpe\Table-Valued Functions\ufn_keyword_patent_class_profile.sql" />
+    <Build Include="volpe\Table-Valued Functions\ufn_patent_text.sql" />
+    <Build Include="volpe\Table-Valued Functions\ufn_patent_text_topic.sql" />
+    <Build Include="volpe\Table-Valued Functions\ufn_pubmed_text_topic.sql" />
+    <Build Include="volpe\Table-Valued Functions\ufn_web_text_topic.sql" />
+    <Build Include="volpe\Views\applicant.sql" />
+    <Build Include="volpe\Views\applicant_bvd_id.sql" />
+    <Build Include="volpe\Views\applicant_family_class_date.sql" />
+    <Build Include="volpe\Views\calendar.sql" />
+    <Build Include="volpe\Views\calendar_attribute_numeric.sql" />
+    <Build Include="volpe\Views\company_aggregate_attribute.sql" />
+    <Build Include="volpe\Views\company_basic.sql" />
+    <Build Include="volpe\Views\company_financial.sql" />
+    <Build Include="volpe\Views\company_financial_ratio.sql" />
+    <Build Include="volpe\Views\company_ip_time.sql" />
+    <Build Include="volpe\Views\company_patent_family.sql" />
+    <Build Include="volpe\Views\company_text.sql" />
+    <Build Include="volpe\Views\company_website.sql" />
+    <Build Include="volpe\Views\deal_acquirer.sql" />
+    <Build Include="volpe\Views\deal_overview.sql" />
+    <Build Include="volpe\Views\deal_structure.sql" />
+    <Build Include="volpe\Views\deal_target.sql" />
+    <Build Include="volpe\Views\deal_text.sql" />
+    <Build Include="volpe\Views\family_appln_date_class.sql" />
+    <Build Include="volpe\Views\industry_code.sql" />
+    <Build Include="volpe\Views\patent_class.sql" />
+    <Build Include="volpe\Views\patent_class_lineage.sql" />
+    <Build Include="volpe\Views\patent_class_metric.sql" />
+    <Build Include="volpe\Views\patent_family_class.sql" />
+    <Build Include="volpe\volpe.sql" />
+    <Build Include="volpe\Table-Valued Functions\ufn_sec_text_topic.sql" />
+    <Build Include="volpe\Views\company_ticker.sql" />
+    <Build Include="ExtendedProperties.sql" />
+    <Build Include="volpe\Scalar-Valued Functions\get_source_version.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="AlphaFactorsDB">
+      <DefaultValue>AlphaFactorsDB</DefaultValue>
+      <Value>$(SqlCmdVar__102)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="alpha_factors_dev">
+      <DefaultValue>alpha_factors_dev</DefaultValue>
+      <Value>$(SqlCmdVar__103)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="bloomberg_development">
+      <DefaultValue>bloomberg_development</DefaultValue>
+      <Value>$(SqlCmdVar__98)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="bloomberg_v2017_001">
+      <DefaultValue>bloomberg_v2017_001</DefaultValue>
+      <Value>$(SqlCmdVar__97)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="BuildVersion">
+      <DefaultValue>0</DefaultValue>
+      <Value>$(SqlCmdVar__95)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="calendar_v2017_001">
+      <DefaultValue>calendar_v2017_001</DefaultValue>
+      <Value>$(SqlCmdVar__104)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="french_data_library_v2017_003">
+      <DefaultValue>french_data_library_v2017_003</DefaultValue>
+      <Value>$(SqlCmdVar__88)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="french_data_library_v2017_004">
+      <DefaultValue>french_data_library_v2017_004</DefaultValue>
+      <Value>$(SqlCmdVar__105)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="idr_linktables_v2017_004">
+      <DefaultValue>idr_linktables_v2017_004</DefaultValue>
+      <Value>$(SqlCmdVar__111)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="nace_code_v2016_002">
+      <DefaultValue>nace_code_v2016_002</DefaultValue>
+      <Value>$(SqlCmdVar__106)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="pwc_v2017a_001">
+      <DefaultValue>pwc_v2017a_001</DefaultValue>
+      <Value>$(SqlCmdVar__108)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="pw_v2017a_001">
+      <DefaultValue>pw_v2017a_001</DefaultValue>
+      <Value>$(SqlCmdVar__107)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="scd_v2017_003">
+      <DefaultValue>scd_v2017_003</DefaultValue>
+      <Value>$(SqlCmdVar__100)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="scd_v2017_004">
+      <DefaultValue>scd_v2017_004</DefaultValue>
+      <Value>$(SqlCmdVar__99)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="scd_v2017_005">
+      <DefaultValue>scd_v2017_005</DefaultValue>
+      <Value>$(SqlCmdVar__109)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="sdd_v2017_002">
+      <DefaultValue>sdd_v2017_002</DefaultValue>
+      <Value>$(SqlCmdVar__110)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="TopicDb">
+      <DefaultValue>p01155_TopicDb</DefaultValue>
+      <Value>$(SqlCmdVar__80)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="TopicDbServer">
+      <DefaultValue>nlams00822</DefaultValue>
+      <Value>$(SqlCmdVar__81)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Release\topic\p01155_TopicDb\TopicDB.dacpac">
+      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Release\topic\p01155_TopicDb\TopicDB.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>TopicDb</DatabaseSqlCmdVariable>
+      <ServerSqlCmdVariable>TopicDbServer</ServerSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\alpha_factors_dev.dacpac">
+      <HintPath>..\alpha_factors_dev.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>alpha_factors_dev</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\calendar_v2017_001.dacpac">
+      <HintPath>..\calendar_v2017_001.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>calendar_v2017_001</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\french_data_library_v2017_004.dacpac">
+      <HintPath>..\french_data_library_v2017_004.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>french_data_library_v2017_004</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\nace_code_v2016_002.dacpac">
+      <HintPath>..\nace_code_v2016_002.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>nace_code_v2016_002</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\pw_v2017a_001.dacpac">
+      <HintPath>..\pw_v2017a_001.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>pw_v2017a_001</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\pwc_v2017a_001.dacpac">
+      <HintPath>..\pwc_v2017a_001.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>pwc_v2017a_001</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\scd_v2017_005.dacpac">
+      <HintPath>..\scd_v2017_005.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>scd_v2017_005</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\sdd_v2017_002.dacpac">
+      <HintPath>..\sdd_v2017_002.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>sdd_v2017_002</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\idr_linktables_v2017_004.dacpac">
+      <HintPath>..\idr_linktables_v2017_004.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>idr_linktables_v2017_004</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CentralViewsDB.dev.publish.xml" />
+    <None Include="CentralViewsDB.azure.publish.xml" />
+    <None Include="backlog.txt" />
+    <None Include="CentralViewsDB.azurevm.publish.xml" />
+    <None Include="CentralViewsDB.alpha.azurevm.publish.publish.xml" />
+  </ItemGroup>
+</Project>

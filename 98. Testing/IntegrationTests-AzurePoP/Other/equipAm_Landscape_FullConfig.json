@@ -1,0 +1,142 @@
+{"ComponentParams" : [ 
+	{ }
+	, { "NodeSelectionParams" :[
+		{"NodeSelectionType" : "NodeList"
+		, "NodeSelectionLabel" : "Original Node List"
+		, "NodeList" : "A61C 07/002|A61C 09/0053|A61C 13/0004|A61C 13/0013|A61C 13/0018|A61C 13/0019|A61F /30948|A61F /30952|A61F /30957|A61F /30962|A61F 02/28|A61F 02/2803|A61F 02/30942|A61L 27/56|B22C 07/02|B22C 09/04|B22F /00|B22F /10|B22F /1056|B22F /1057|B22F /1058|B22F /1059|B22F /248|B22F 03/003|B22F 03/004|B22F 03/008|B22F 03/105|B22F 03/1055|B22F 03/15|B22F 03/24|B22F 05/00|B22F 05/009|B22F 05/04|B22F 05/10|B22F 07/02|B22F 07/06|B23K /001|B23K 09/04|B23K 15/0086|B23K 26/127|B23K 26/34|B23K 35/0244|B23P 06/007|B28B 01/001|B29C /0838|B29C /9259|B29C /92704|B29C /92895|B29C 33/3842|B29C 33/3857|B29C 41/12|B29C 41/36|B29C 47/0011|B29C 47/0014|B29C 47/0866|B29C 47/92|B29C 67/00|B29C 67/0051|B29C 67/0055|B29C 67/0059|B29C 67/0062|B29C 67/0066|B29C 67/007|B29C 67/0074|B29C 67/0077|B29C 67/0081|B29C 67/0085|B29C 67/0088|B29C 67/0092|B29C 67/0096|B29C 67/04|B29D 11/00432|B29K /00|B29K /0073|B29K /251|B29L /00|B29L /7532|B33Y 10/00|B33Y 30/00|B33Y 40/00|B33Y 50/00|B33Y 50/02|B33Y 70/00|B33Y 80/00|B41J 03/4073|B82Y 30/00|C01B 33/037|C04B /6026|C04B /665|C04B 35/111|C04B 35/64|C04B 40/0039|C08J 05/00|C08J 07/04|C08K /003|C08K /011|C08K /0806|C08K 03/04|C08K 03/34|C08K 05/14|C08K 05/526|C08K 05/5425|C08K 13/02|C08L /025|C08L /08|C08L 23/08|C08L 23/12|C08L 23/14|C08L 25/12|C08L 33/08|C08L 53/00|C08L 63/00|C08L 67/025|C08L 75/16|C09D 11/101|C21D 01/09|C22B 09/226|C22B 09/228|C22B 34/1295|C22B 34/14|C22B 34/24|C22C 01/0416|C22C 01/045|C22C 14/00|C22C 19/03|C22C 19/056|C22C 19/07|C22C 32/0026|C22F 01/183|C23C 04/08|C23C 04/12|C23C 04/127|C23C 10/30|C23C 10/60|C23C 14/246|C23C 14/30|C23C 14/3414|C23C 16/4418|C23C 16/513|C23C 18/14|C23C 24/08|C23C 24/10|C23C 26/02|C25D 01/00|F01D 05/005|F01D 05/147|F01D 05/187|F05D /22|F05D /30|F05D /31|F16C /46|F16C 33/64|G01N 29/30|G02B 27/2214|G03B 35/14|G03F 07/0037|G03F 07/027|G03F 07/038|G03G 09/0819|G05B /49008|G05B /49018|G05B 15/02|G05B 19/4099|G06F /02|G06F /04806|G06F /06|G06F /34|G06F /42|G06F 03/0481|G06F 03/04812|G06F 03/04815|G06F 03/0482|G06F 03/04842|G06F 03/04845|G06F 03/0488|G06F 03/04883|G06F 09/4443|G06F 17/30241|G06F 17/50|G06F 17/5004|G06F 17/5009|G06F 17/5018|G06F 17/5022|G06F 17/5045|G06F 17/5086|G06F 17/509|G06Q 10/06|G06T /004|G06T /012|G06T /04|G06T /2004|G06T /2008|G06T /2016|G06T /2021|G06T /2024|G06T /24|G06T /61|G06T 11/00|G06T 11/001|G06T 11/203|G06T 11/206|G06T 11/60|G06T 13/00|G06T 13/20|G06T 13/40|G06T 15/005|G06T 15/04|G06T 15/20|G06T 15/50|G06T 15/503|G06T 17/00|G06T 17/005|G06T 17/05|G06T 17/10|G06T 17/20|G06T 17/30|G06T 19/00|G06T 19/003|G06T 19/20|G09B 23/30|G11B /213|G11B /2545|G11B /415|G11B /90|G11B 27/032|G11B 27/034|G11B 27/34|H01J 37/305|H01J 37/3053|H04N 09/75|H04R /77|H04R 25/652|H04R 25/658|H05K 03/426|Y02E 60/122|Y02W 30/54|Y10S 707/99943|Y10S 707/99944|Y10S 707/99945|Y10S 715/964|Y10T 428/24802"
+		}
+		] }
+	, { "ScoreLandscapeNodesParams" :[{
+		"ScoringType" : "CompanyPortfolio"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Relevant Companies"
+		, "Normalize" : "None"
+		, "CompanyId" : "USD896789851D|DE2010000581|US140689340"
+		},{
+		"ScoringType" : "CompanyPortfolio"
+		, "ScoreGroup" : "Weight"
+		, "SeriesGroup" : "Relevant Companies"
+		, "Normalize" : "Portfolio"
+		, "CompanyId" : "USD896789851D|DE2010000581|US140689340"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Additive manufacturing"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "None"
+		, "BagOfWords" : "additive manufact*|3d print*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Additive manufacturing"
+		, "ScoreGroup" : "Weight"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "Portfolio"
+		, "BagOfWords" : "additive manufact*|3d print*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Selective Laser Sintering"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "None"
+		, "BagOfWords" : "selective~laser~sinter*|sls"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Selective Laser Sintering"
+		, "ScoreGroup" : "Weight"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "Portfolio"
+		, "BagOfWords" : "selective~laser~sinter*|sls"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "UV Photo Curable"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "None"
+		, "BagOfWords" : "uv~photo~cur*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "UV Photo Curable"
+		, "ScoreGroup" : "Weight"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "Portfolio"
+		, "BagOfWords" : "uv~photo~cur*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Fused Deposition Modeling"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "None"
+		, "BagOfWords" : "fused~deposition~model*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Fused Deposition Modeling"
+		, "ScoreGroup" : "Weight"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "Portfolio"
+		, "BagOfWords" : "fused~deposition~model*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Stereo Lithography"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "None"
+		, "BagOfWords" : "stereo~lithograph*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Stereo Lithography"
+		, "ScoreGroup" : "Weight"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "Portfolio"
+		, "BagOfWords" : "stereo~lithograph*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Electron Beam Melting"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "None"
+		, "BagOfWords" : "electron~beam~melt*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Electron Beam Melting"
+		, "ScoreGroup" : "Weight"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "Portfolio"
+		, "BagOfWords" : "electron~beam~melt*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Binder Jetting"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "None"
+		, "BagOfWords" : "binder~jet*"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Binder Jetting"
+		, "ScoreGroup" : "Weight"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "Portfolio"
+		, "BagOfWords" : "binder~jet*"
+		}]
+		}
+	, { "GetNodePropertiesParams" :[
+		{"PropertyLabel" : "Label"
+		, "PropertyMethod" : "TechnologyClassLabel"
+		},{"PropertyLabel" : "Extended Label"
+		, "PropertyMethod" : "TechnologyClassExtendedLabel"
+		},{"PropertyLabel" : "Size"
+		, "PropertyMethod" : "TechnologyClassSize"
+		},{"PropertyLabel" : "Trend"
+		, "PropertyMethod" : "TechnologyTrendRelativeToLandscape"
+		},{"PropertyLabel" : "High Level Label"
+		, "PropertyMethod" : "HighLevelTechnologyLabel"
+		, "PropertyParameters" : "H04:Software|G06:Software|B41:Printing|B42:Printing|B43:Printing|B44:Printing|C09:Inks and Dyes|C07:Raw material|C08:Raw material|C2:Raw material|B2:Finished part|B33:Additive manufacturing"
+		} ] }
+	, { }
+	, {
+		"NormalizeDistance" : "none"
+		, "RandomSeed" : 0
+		, "MaxIterations" : 100
+		, "Algorithm" : "MatlabMds"
+		} 
+	, { }
+	]}

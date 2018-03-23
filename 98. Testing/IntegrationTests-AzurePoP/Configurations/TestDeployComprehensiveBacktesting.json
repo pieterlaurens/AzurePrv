@@ -1,0 +1,80 @@
+{"Header":{
+	"NameOfApi":"CreateLonglist",
+	"Creator":"pbaljon@deloitte.nl",
+	"ConfigurationDescription":"Integration testing scenario - Backtesting longlist",
+	"ConfigurationVersion":""
+},"ComponentParams" : [ 
+{ "PackageName":"CreatePrepareEnvironment"}
+, { "PackageName":"CompanyRetrieval"
+	, "RetrievalParams" : [
+		{"RetrievalType" : "BasicConstraints"
+			, "RetrievalLabel" : "US listed"
+			, "NumberOfCompanies" : 500
+			, "Constraints" : "main_exchange:NASDAQ National Market,New York Stock Exchange (NYSE)"
+		}
+	]
+	}
+, { "PackageName":"CompanyScoring"
+	, "ScoringParams" : [
+    {
+      "ScoringType": "OrbisAttribute",
+      "ScoringLabel": "Country",
+      "AttributeName": "country"
+    },
+    {"ScoringType" : "OrbisAttribute"
+		, "ScoringLabel" : "Country"
+		, "AttributeName" : "country"
+		},{
+		"ScoringType" : "OrbisAttribute"
+		, "ScoringLabel" : "Age"
+		, "AttributeName" : "age"
+		},{
+		"ScoringType" : "IndustryAttribute"
+		, "ScoringLabel" : "Industry"
+		},{
+		"ScoringType" : "TemporalAttribute"
+		, "ScoringLabel" : "Revenue"
+		, "AttributeName" : "revenue"
+		, "IsPredictor" : "Yes"
+		, "TimeAttribute" :  "M"
+    , "TimeRange" : "2005_03-2010_07"
+		},{
+		"ScoringType" : "TemporalAttribute"
+		, "ScoringLabel" : "Total returns"
+		, "AttributeName" : "HIST_TRR_MONTHLY"
+		, "IsPredictor" : "No"
+		, "TimeAttribute" :  "M"
+    , "TimeRange" : "2005_03-2010_07"
+		},{
+		"ScoringType" : "TemporalAttribute"
+		, "ScoringLabel" : "Biography Diversity"
+		, "AttributeName" : "BiographyDiversity"
+		, "IsPredictor" : "Yes"
+		, "TimeAttribute" :  "M"
+    , "TimeRange" : "2005_03-2010_07"
+		},{
+		"ScoringType" : "TemporalAttribute"
+		, "ScoringLabel" : "Team size"
+		, "AttributeName" : "CompanyTeamSize"
+		, "IsPredictor" : "Yes"
+		, "TimeAttribute" :  "M"
+    , "TimeRange" : "2005_03-2010_07"
+		},{
+		"ScoringType" : "TemporalAttribute"
+		, "ScoringLabel" : "Biography length"
+		, "AttributeName" : "AvgBiographLength"
+		, "IsPredictor" : "Yes"
+		, "TimeAttribute" :  "M"
+    , "TimeRange" : "2005_03-2010_07"
+		},{
+		"ScoringType" : "TemporalAttribute"
+		, "ScoringLabel" : "Market Capitalization"
+		, "AttributeName" : "CUR_MKT_CAP"
+		, "IsPredictor" : "Yes"
+		, "TimeAttribute" :  "M"
+    , "TimeRange" : "2005_03-2010_07"
+		}
+	]
+	}
+, { "PackageName":"PrepareForVisualization"}
+	]}

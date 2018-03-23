@@ -1,0 +1,24 @@
+﻿CREATE FUNCTION [james].[ufn_company_text]
+(
+	@contains_clause nvarchar(4000),
+	@add_double_quotes bit = 1
+)
+RETURNS @returntable TABLE
+(
+	company_id nvarchar(50)
+)
+AS
+BEGIN
+	if(@add_double_quotes=1)
+		set @contains_clause = '"'+@contains_clause+'"'
+
+	INSERT @returntable
+	SELECT
+		lb.ticker as company_id
+	FROM
+		[$(scd_v2017_002)].dbo.orbis_text o JOIN
+		[$(idr_linktables_v2017_002)].dbo.linktable_ticker_to_bvd lb ON lb.bvd_id=o.bvd_id
+	WHERE
+		contains(text_content,@contains_clause)
+	RETURN
+END

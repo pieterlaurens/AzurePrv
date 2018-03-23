@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>PlatformDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{23ad5f8d-4526-4098-9571-289d9c2e4d70}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>InvocationHandler</RootNamespace>
+    <AssemblyName>InvocationHandler</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <TargetDatabase>PlatformDB</TargetDatabase>
+    <DefaultFilegroup>DATA</DefaultFilegroup>
+    <Containment>None</Containment>
+    <IsNestedTriggersOn>True</IsNestedTriggersOn>
+    <IsTransformNoiseWordsOn>False</IsTransformNoiseWordsOn>
+    <TwoDigitYearCutoff>2049</TwoDigitYearCutoff>
+    <NonTransactedFileStreamAccess>OFF</NonTransactedFileStreamAccess>
+    <TargetRecoveryTimePeriod>0</TargetRecoveryTimePeriod>
+    <TargetRecoveryTimeUnit>SECONDS</TargetRecoveryTimeUnit>
+    <IsChangeTrackingOn>False</IsChangeTrackingOn>
+    <IsChangeTrackingAutoCleanupOn>True</IsChangeTrackingAutoCleanupOn>
+    <ChangeTrackingRetentionPeriod>2</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Days</ChangeTrackingRetentionUnit>
+    <IsEncryptionOn>False</IsEncryptionOn>
+    <IsBrokerPriorityHonored>False</IsBrokerPriorityHonored>
+    <Trustworthy>False</Trustworthy>
+    <AutoUpdateStatisticsAsynchronously>False</AutoUpdateStatisticsAsynchronously>
+    <PageVerify>NONE</PageVerify>
+    <ServiceBrokerOption>EnableBroker</ServiceBrokerOption>
+    <DateCorrelationOptimizationOn>False</DateCorrelationOptimizationOn>
+    <Parameterization>SIMPLE</Parameterization>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <VardecimalStorageFormatOn>True</VardecimalStorageFormatOn>
+    <SupplementalLoggingOn>False</SupplementalLoggingOn>
+    <CompatibilityMode>110</CompatibilityMode>
+    <AnsiNullDefault>True</AnsiNullDefault>
+    <AnsiNulls>True</AnsiNulls>
+    <AnsiPadding>True</AnsiPadding>
+    <AnsiWarnings>True</AnsiWarnings>
+    <ArithAbort>True</ArithAbort>
+    <ConcatNullYieldsNull>True</ConcatNullYieldsNull>
+    <QuotedIdentifier>True</QuotedIdentifier>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <DatabaseChaining>False</DatabaseChaining>
+    <DatabaseState>ONLINE</DatabaseState>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DefaultCursor>LOCAL</DefaultCursor>
+    <AutoClose>False</AutoClose>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <TornPageDetection>False</TornPageDetection>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <Recovery>FULL</Recovery>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="ivh" />
+    <Folder Include="ivh\Tables" />
+    <Folder Include="ivh\Stored Procedures" />
+    <Folder Include="Storage\" />
+    <Folder Include="Security\" />
+    <Folder Include="nlh" />
+    <Folder Include="dth" />
+    <Folder Include="utl" />
+    <Folder Include="utl\Functions" />
+    <Folder Include="nlh\Tables" />
+    <Folder Include="nlh\Stored Procedures" />
+    <Folder Include="ivh\Functions" />
+    <Folder Include="nlh\Functions" />
+    <Folder Include="utl\Stored Procedures" />
+    <Folder Include="utl\Tables" />
+    <Folder Include="dth\Stored Procedures" />
+    <Folder Include="dth\Tables" />
+    <Folder Include="dth\Functions" />
+    <Folder Include="ivh\Views\" />
+    <Folder Include="data" />
+    <Folder Include="scripts" />
+    <Folder Include="utl\User Defined Types\" />
+    <Folder Include="Service Broker\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="ivh\Tables\api.sql" />
+    <Build Include="ivh\Tables\run.sql" />
+    <Build Include="ivh\Stored Procedures\run_getParamValues.sql" />
+    <Build Include="ivh\Stored Procedures\run_executeSSISPackage.sql" />
+    <Build Include="ivh\Stored Procedures\run_createNewRun.sql" />
+    <Build Include="Storage\DATA.sql" />
+    <Build Include="Security\nlh.sql" />
+    <Build Include="Security\ivh.sql" />
+    <Build Include="utl\Functions\splitString.sql" />
+    <Build Include="Security\dth.sql" />
+    <Build Include="Security\utl.sql" />
+    <Build Include="nlh\Tables\log.sql" />
+    <Build Include="nlh\Stored Procedures\log_addEntry.sql" />
+    <Build Include="ivh\Tables\api_workflow.sql" />
+    <Build Include="nlh\Tables\event_type.sql" />
+    <Build Include="nlh\Tables\event_log.sql" />
+    <Build Include="nlh\Tables\event_level.sql" />
+    <Build Include="nlh\Tables\event.sql" />
+    <Build Include="ivh\Tables\run_paramvalue.sql" />
+    <Build Include="ivh\Tables\run_exectree.sql" />
+    <Build Include="ivh\Tables\api_configitem.sql" />
+    <Build Include="ivh\Views\api_tree.sql" />
+    <Build Include="nlh\Functions\checkEvents.sql" />
+    <Build Include="ivh\Functions\getDependencies.sql" />
+    <Build Include="nlh\Stored Procedures\event_addEntry.sql" />
+    <None Include="data\insertEventLevels.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\insertEventLogs.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="data\insertEventTypes.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Build Include="ivh\Functions\getExecutionTree.sql" />
+    <Build Include="ivh\Tables\resource.sql" />
+    <Build Include="ivh\Tables\api_resource.sql" />
+    <Build Include="ivh\Functions\checkApi.sql" />
+    <Build Include="ivh\Functions\checkProxy.sql" />
+    <Build Include="ivh\Functions\checkPackage.sql" />
+    <Build Include="ivh\Functions\getDescendants.sql" />
+    <Build Include="ivh\Functions\getAncestors.sql" />
+    <Build Include="ivh\Tables\run_execvalue.sql" />
+    <Build Include="ivh\Stored Procedures\run_setExecValue.sql" />
+    <Build Include="ivh\Stored Procedures\run_getExecValues.sql" />
+    <Build Include="nlh\Tables\run_conversation.sql" />
+    <Build Include="nlh\Functions\checkEventsForRun.sql" />
+    <Build Include="ivh\Functions\getJobName.sql" />
+    <Build Include="utl\Functions\splitString2.sql" />
+    <Build Include="utl\User Defined Types\udt_strTable.sql" />
+    <Build Include="Service Broker\__InvocationHandler-dev_EventNotificationService_EventContract.sql" />
+    <Build Include="Service Broker\__InvocationHandler-dev_EventNotificationService_EventResponseMessage.sql" />
+    <Build Include="Service Broker\__InvocationHandler-dev_EventNotificationService_EventNotificationMessage.sql" />
+    <Build Include="Service Broker\EventResponseQueue.sql" />
+    <Build Include="Service Broker\EventNotificationQueue.sql" />
+    <Build Include="Service Broker\__InvocationHandler-dev_EventNotificationService_Target.sql" />
+    <Build Include="Service Broker\__InvocationHandler-dev_EventNotificationService_Init.sql" />
+    <Build Include="ivh\Functions\getComponentName.sql" />
+    <Build Include="nlh\Stored Procedures\run_getStatusByProjectKey.sql" />
+    <Build Include="nlh\Stored Procedures\run_getStatusByProjectId.sql" />
+    <Build Include="nlh\Stored Procedures\run_getStatus.sql" />
+    <Build Include="ivh\Stored Procedures\api_addNode.sql" />
+    <Build Include="ivh\Stored Procedures\api_addEdge.sql" />
+    <Build Include="ivh\Stored Procedures\api_deleteNode.sql" />
+    <PostDeploy Include="scripts\Script.createApis.sql" />
+    <Build Include="nlh\Functions\isConversationPresent.sql" />
+    <Build Include="ivh\Stored Procedures\run_removeSqlServerAgentJobs.sql" />
+    <Build Include="ExtendedProperties.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlatformDB.publish.xml" />
+    <None Include="PlatformDB.dev.publish.xml" />
+    <None Include="scripts\Script.getDurationFromLog.sql" />
+    <None Include="PlatformDB.azure.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="BuildVersion">
+      <DefaultValue>0</DefaultValue>
+      <Value>$(SqlCmdVar__3)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="DeploymentServer">
+      <DefaultValue>nlams00859</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="SsisProjectName">
+      <DefaultValue>PRV-dev</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\msdb.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\110\SqlSchemas\msdb.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+</Project>

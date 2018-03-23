@@ -1,0 +1,20 @@
+=== 1. Global variable ====================================
+        SqlConnection myLoggingConnection;
+===========================================================
+
+=== 2. In the main() or preExecute()=======================
+            string loggingCMVar = "User::cfg_tpl_CMPlatformDB";
+            string loggingCMName = null;
+
+            try
+            {
+                loggingCMName = (string) Dts.Variables[loggingCMVar].Value;
+                myLoggingConnection = Dts.Connections[loggingCMName].AcquireConnection(Dts.Transaction) as SqlConnection;
+		...	
+===========================================================
+
+=== 3. At the end of the main() or postExecute()===========
+                if (myLoggingConnection != null)
+                {
+                    Dts.Connections[loggingCMName].ReleaseConnection(myLoggingConnection);
+===========================================================

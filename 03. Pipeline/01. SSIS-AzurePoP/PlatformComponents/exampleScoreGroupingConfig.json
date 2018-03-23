@@ -1,0 +1,20 @@
+{
+"ScoreGroupingParams" : [
+	{
+	"GroupingType" : "Percentiles"
+	, "ScoringLabel" : "Acquisition baskets"
+	, "SourceScoringLabel" : "Number of Acquisitions"
+	, "NumberOfBaskets" : 3
+	}, {
+	"GroupingType" : "CustomBasketBounds"
+	, "ScoringLabel" : "Patent Basket"
+	, "SourceScoringLabel" : "Number of Patents"
+	, "BasketBounds" : "5|25|100|500"
+	}, {
+	"GroupingType" : "CustomBasketValues"
+	, "ScoringLabel" : "Region"
+	, "SourceScoringLabel" : "Country"
+	, "BasketValues" : "Europe:NL,DE,FR,BE,ES,IT,GB|North America:US,CA,MX|Asia:CN,JP,TW,KR"
+	}
+]
+}

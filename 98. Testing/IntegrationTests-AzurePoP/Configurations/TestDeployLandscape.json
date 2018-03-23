@@ -1,0 +1,79 @@
+{"Header":{
+	"NameOfApi":"CreateLandscape",
+	"Creator":"pbaljon@deloitte.nl",
+	"ConfigurationDescription":"Integration testing scenario - Creating an additive manufacturing landscape",
+	"ConfigurationVersion":"",
+	},"ComponentParams" : [ 
+	{ "PackageName":"CreatePrepareEnvironment"}
+	, { "PackageName":"SelectLandscapeNodes"
+		, "NodeSelectionParams" :[
+		{"NodeSelectionType" : "NodeList"
+		, "NodeSelectionLabel" : "Test Node List"
+		, "NodeList" : "B33Y 30/00|B33Y 70/00|B33Y 80/00|A61C 13/0019"
+		}
+		] }
+	, { "PackageName":"ScoreLandscapeNodes"
+		, "ScoreLandscapeNodesParams" :[{
+		"ScoringType" : "CompanyPortfolio"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Relevant Companies"
+		, "Normalize" : "None"
+		, "CompanyId" : "USD305504941D|DE2010000581"
+		},{
+		"ScoringType" : "CompanyPortfolio"
+		, "ScoreGroup" : "Weight"
+		, "SeriesGroup" : "Relevant Companies"
+		, "Normalize" : "Class"
+		, "CompanyId" : "USD305504941D|DE2010000581"
+		},{
+		"ScoringType" : "BagOfWords"
+		, "ScoringLabel" : "Additive manufacturing"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "None"
+		, "BagOfWords" : "additive manufact*|3d print*"
+		},{
+		"ScoringType" : "TopicScore"
+		, "ScoringLabel" : "AM Topic"
+		, "ScoreGroup" : "Plain"
+		, "SeriesGroup" : "Strategic area"
+		, "Normalize" : "ClassSeries"
+		, "TopicName" : "Additive Manufacturing"
+		},{
+		"ScoringType" : "BagOfClasses"
+		, "ScoringLabel" : "Injection molding"
+		, "ScoreGroup" : "Relevance"
+		, "SeriesGroup" : "Co-filing"
+		, "Normalize" : "None"
+		, "BagOfWords" : "B29C 45/00"
+		},{
+		"ScoringType" : "BagOfClasses"
+		, "ScoringLabel" : "Injection molding"
+		, "ScoreGroup" : "Plain"
+		, "SeriesGroup" : "Co-filing"
+		, "Normalize" : "None"
+		, "BagOfWords" : "B29C 45/00"
+		}]
+		}
+	, { "PackageName":"GetNodeProperties"
+		, "GetNodePropertiesParams" :[
+		{"PropertyLabel" : "Label"
+		, "PropertyMethod" : "TechnologyClassLabel"
+		},{"PropertyLabel" : "Size"
+		, "PropertyMethod" : "TechnologyClassSize"
+		},{"PropertyLabel" : "High Level Label"
+		, "PropertyMethod" : "HighLevelTechnologyLabel"
+		, "PropertyParameters" : "B33:Additive manufacturing|A61:Health"
+		},{"PropertyLabel" : "Technology Trend"
+		, "PropertyMethod" : "TechnologyTrend"
+		, "PropertyParameters" : "clsww"
+		} ] }
+	, { "PackageName":"CalculateLandscapeDistances" }
+	, {"PackageName":"ApproximateDistanceIn2D"
+		, "NormalizeDistance" : "none"
+		, "RandomSeed" : 0
+		, "MaxIterations" : 100
+		, "Algorithm" : "MatlabMds"
+		} 
+	, { "PackageName":"PrepareForVisualization" }
+	]}

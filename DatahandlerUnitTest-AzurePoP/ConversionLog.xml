@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_ConversionReport_Files/ConversionReport.xslt'?>
+<UpgradeLog>
+  <Properties>
+    <Property Name="Project" Value="DatahandlerUnitTest" />
+    <Property Name="Project File" Value="C:\Users\pbaljon\Documents\source\PRV\01. Main\DatahandlerUnitTest\DatahandlerUnitTest.csproj" />
+    <Property Name="Date" Value="woensdag 13 december 2017" />
+    <Property Name="Time" Value="11:49" />
+  </Properties>
+  <Event ErrorLevel="0" Source="" Description="C:\Users\pbaljon\Documents\source\PRV\01. Main\DatahandlerUnitTest\DatahandlerUnitTest.csproj was copied to C:\Users\pbaljon\Documents\source\PRV\01. Main\DatahandlerUnitTest\DatahandlerUnitTest_20171213104900.csproj for backup." />
+  <Event ErrorLevel="0" Project="C:\Users\pbaljon\Documents\source\PRV\01. Main\DatahandlerUnitTest\DatahandlerUnitTest.csproj" Source="..\DatahandlerUnitTest.csproj" Description="Project was successfully converted: 'C:\Users\pbaljon\Documents\source\PRV\01. Main\DatahandlerUnitTest\DatahandlerUnitTest.csproj' to 'C:\Users\pbaljon\Documents\source\PRV\01. Main\DatahandlerUnitTest\DatahandlerUnitTest.csproj'" />
+  <Event ErrorLevel="3" Project="C:\Users\pbaljon\Documents\source\PRV\01. Main\DatahandlerUnitTest\DatahandlerUnitTest.csproj" Source="..\DatahandlerUnitTest.csproj" Description="Converted" />
+</UpgradeLog>

@@ -1,0 +1,33 @@
+=== 1. Global variable ====================================
+        SqlConnection myLoggingConnection;
+===========================================================
+
+=== 2. Method to perform logging, with standard values ====
+        private void LogEntry(string status, string msg)
+        {
+            using (SqlCommand cmd = new SqlCommand("nlh.log_addEntry", myLoggingConnection))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@component", "CompanyScoring.dtsx");
+                cmd.Parameters.AddWithValue("@source_type", "SCRIPT");
+                cmd.Parameters.AddWithValue("@source_name", "Get list of scoring configurations");
+                cmd.Parameters.AddWithValue("@message", msg);
+                cmd.Parameters.AddWithValue("@action", "EXECUTE");
+                cmd.Parameters.AddWithValue("@status", status);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+===========================================================
+
+=== 3. In the main() or preExecute()=======================
+            string loggingCMVar = "User::cfg_tpl_CMPlatformDB";
+            string loggingCMName = null;
+
+            try
+            {
+                loggingCMName = (string) Dts.Variables[loggingCMVar].Value;
+                myLoggingConnection = Dts.Connections[loggingCMName].AcquireConnection(Dts.Transaction) as SqlConnection;
+		...	
+===========================================================
