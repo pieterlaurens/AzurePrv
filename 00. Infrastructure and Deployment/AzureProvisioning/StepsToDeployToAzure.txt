@@ -1,0 +1,17 @@
+1. Deploy entis VM from Powershell
+2. Add inbound rules
+3. Join VM to entis domain (to log in with @entis.ai) --> Karel
+4. Copy project datamart .bak file from nlams00872, restore on VM
+5. Login as entisadmin (for integrated security) 
+6. Open SSMS and Create SSIS catalog. Add PRV-dev folder.
+7. Install Azure storage tools and storage explorer (to download .bak files for data handler)
+8. Copy relevant bak files to temporary storage
+9. Restore bak files on local server
+10. Replace the references (Microsoft.SqlServer.ManagedDTS and Microsoft.SqlServer.ScriptTask) in the PipelineFramework for the SQL Server 140 version (14.0). [C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\PublicAssemblies\]
+11. Build the pipeline framework with Administrator rights so the resulting DLL is added to the local GAC.
+12. Copy the DLLs to the VM and run gacutil there (v8.1a, x64) to install Newtonsoft 7.01 net45 and (new) PipelineFramework
+13. Copy the PrvAnalytics folder from nlams00872 to the F drive of the VM (it needs to have the /Release folder filled).
+14. Update CreatePrepareEnvironment to have the if-then-else rules point to the correct drie/folder for the dacpac files (F:\PrvAnalytics)
+15. Rebuild the PlatformHandlers and PlatformComponents (SSIS projects) with the new PipelineFramework in the GAC.
+16. Copy the resulting .ispac files from bin directory in TFS to D: drive on VM.
+17. Run (modified) powershell script to install SSIS packages with isdeploymentwizard.

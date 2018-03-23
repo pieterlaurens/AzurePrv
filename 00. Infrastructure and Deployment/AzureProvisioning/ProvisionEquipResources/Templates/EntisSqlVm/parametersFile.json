@@ -1,0 +1,96 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "westeurope"
+    },
+    "virtualMachineName": {
+      "value": "equip-pop-vm"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_E2s_v3"
+    },
+    "adminUsername": {
+      "value": "entisadmin"
+    },
+    "virtualNetworkName": {
+      "value": "entis"
+    },
+    "networkInterfaceName": {
+      "value": "ent001200"
+    },
+    "networkSecurityGroupName": {
+      "value": "vms-nsg"
+    },
+    "adminPassword": {
+      "value": "321nimdAsitnE"
+    },
+    "diagnosticsStorageAccountName": {
+      "value": "edxdiag765"
+    },
+    "diagnosticsStorageAccountId": {
+      "value": "Microsoft.Storage/storageAccounts/edxdiag765"
+    },
+    "diagnosticsStorageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "addressPrefix": {
+      "value": "10.0.0.0/24"
+    },
+    "subnetName": {
+      "value": "VirtualMachines"
+    },
+    "subnetPrefix": {
+      "value": "10.0.0.0/24"
+    },
+    "publicIpAddressName": {
+      "value": "equip-pop-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Dynamic"
+    },
+    "publicIpAddressSku": {
+      "value": "Basic"
+    },
+        "sqlConnectivityType": {
+            "value": "Public"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "sqlStorageDisksCount": {
+            "value": 1
+        },
+        "sqlStorageWorkloadType": {
+            "value": "GENERAL"
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": "NEW"
+        },
+        "sqlStorageStartingDeviceId": {
+            "value": 2
+        },
+        "sqlStorageDeploymentToken": {
+            "value": 25443
+        },
+        "sqlAutopatchingDayOfWeek": {
+            "value": "Sunday"
+        },
+        "sqlAutopatchingStartHour": {
+            "value": "2"
+        },
+        "sqlAutopatchingWindowDuration": {
+            "value": "60"
+        },
+        "sqlAuthenticationLogin": {
+            "value": "entisadmin"
+        },
+        "sqlAuthenticationPassword": {
+            "value": "321nimdAsitnE"
+        },
+        "rServicesEnabled": {
+            "value": "false"
+        }
+  }
+}

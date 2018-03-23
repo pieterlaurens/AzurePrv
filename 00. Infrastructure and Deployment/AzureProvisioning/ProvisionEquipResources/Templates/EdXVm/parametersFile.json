@@ -1,0 +1,96 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "westeurope"
+    },
+    "virtualMachineName": {
+      "value": "edXTraining"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_D1_v2"
+    },
+    "adminUsername": {
+      "value": "pieterlaurens"
+    },
+    "virtualNetworkName": {
+      "value": "edX-vnet"
+    },
+    "networkInterfaceName": {
+      "value": "edxtraining993"
+    },
+    "networkSecurityGroupName": {
+      "value": "edXTraining-nsg"
+    },
+    "adminPassword": {
+      "value": "Pieterlaurens!982"
+    },
+    "diagnosticsStorageAccountName": {
+      "value": "edxdiag765"
+    },
+    "diagnosticsStorageAccountId": {
+      "value": "Microsoft.Storage/storageAccounts/edxdiag765"
+    },
+    "diagnosticsStorageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "addressPrefix": {
+      "value": "10.0.0.0/24"
+    },
+    "subnetName": {
+      "value": "default"
+    },
+    "subnetPrefix": {
+      "value": "10.0.0.0/24"
+    },
+    "publicIpAddressName": {
+      "value": "edXTraining-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Dynamic"
+    },
+    "publicIpAddressSku": {
+      "value": "Basic"
+    },
+        "sqlConnectivityType": {
+            "value": "Public"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "sqlStorageDisksCount": {
+            "value": 1
+        },
+        "sqlStorageWorkloadType": {
+            "value": "GENERAL"
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": "NEW"
+        },
+        "sqlStorageStartingDeviceId": {
+            "value": 2
+        },
+        "sqlStorageDeploymentToken": {
+            "value": 25443
+        },
+        "sqlAutopatchingDayOfWeek": {
+            "value": "Sunday"
+        },
+        "sqlAutopatchingStartHour": {
+            "value": "2"
+        },
+        "sqlAutopatchingWindowDuration": {
+            "value": "60"
+        },
+        "sqlAuthenticationLogin": {
+            "value": "pieterlaurens"
+        },
+        "sqlAuthenticationPassword": {
+            "value": "charlott3!982"
+        },
+        "rServicesEnabled": {
+            "value": "false"
+        }
+  }
+}

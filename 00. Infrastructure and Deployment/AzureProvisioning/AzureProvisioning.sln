@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "EquipDataFactoryPop", "EquipDataFactoryPop\EquipDataFactoryPop.dtproj", "{0299EDBE-776C-4049-9E80-1F7B35CDFA7F}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DataFactoryDb", "DataFactoryDb\DataFactoryDb.sqlproj", "{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}"
+EndProject
+Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "ProvisionEquipResources", "ProvisionEquipResources\ProvisionEquipResources.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "CompanyDataProduction", "CompanyDataProduction\CompanyDataProduction.dtproj", "{35750BD4-F5D3-41D2-8FA1-C65C392FF01D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0299EDBE-776C-4049-9E80-1F7B35CDFA7F}.Debug|Any CPU.ActiveCfg = Development
+		{0299EDBE-776C-4049-9E80-1F7B35CDFA7F}.Debug|Any CPU.Build.0 = Development
+		{0299EDBE-776C-4049-9E80-1F7B35CDFA7F}.Development|Any CPU.ActiveCfg = Development
+		{0299EDBE-776C-4049-9E80-1F7B35CDFA7F}.Development|Any CPU.Build.0 = Development
+		{0299EDBE-776C-4049-9E80-1F7B35CDFA7F}.Release|Any CPU.ActiveCfg = Development
+		{0299EDBE-776C-4049-9E80-1F7B35CDFA7F}.Release|Any CPU.Build.0 = Development
+		{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}.Development|Any CPU.Deploy.0 = Debug|Any CPU
+		{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B8BAE1-3DA4-4E38-89D4-9D518B4F6497}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35750BD4-F5D3-41D2-8FA1-C65C392FF01D}.Debug|Any CPU.ActiveCfg = Development
+		{35750BD4-F5D3-41D2-8FA1-C65C392FF01D}.Debug|Any CPU.Build.0 = Development
+		{35750BD4-F5D3-41D2-8FA1-C65C392FF01D}.Development|Any CPU.ActiveCfg = Development
+		{35750BD4-F5D3-41D2-8FA1-C65C392FF01D}.Development|Any CPU.Build.0 = Development
+		{35750BD4-F5D3-41D2-8FA1-C65C392FF01D}.Release|Any CPU.ActiveCfg = Development
+		{35750BD4-F5D3-41D2-8FA1-C65C392FF01D}.Release|Any CPU.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D667DB4-3E57-4971-8502-4B631FA55D72}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.nl.deloitte.com/tfs/engine
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EquipDataFactoryPop\\EquipDataFactoryPop.dtproj
+		SccProjectName1 = EquipDataFactoryPop
+		SccLocalPath1 = EquipDataFactoryPop
+		SccProjectUniqueName2 = DataFactoryDb\\DataFactoryDb.sqlproj
+		SccProjectName2 = DataFactoryDb
+		SccLocalPath2 = DataFactoryDb
+		SccProjectUniqueName3 = ProvisionEquipResources\\ProvisionEquipResources.pssproj
+		SccProjectName3 = ProvisionEquipResources
+		SccLocalPath3 = ProvisionEquipResources
+		SccProjectUniqueName4 = CompanyDataProduction\\CompanyDataProduction.dtproj
+		SccProjectName4 = CompanyDataProduction
+		SccLocalPath4 = CompanyDataProduction
+	EndGlobalSection
+EndGlobal

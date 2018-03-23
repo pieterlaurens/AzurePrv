@@ -1,0 +1,96 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westeurope"
+        },
+        "virtualMachineName": {
+            "value": "PipelineSdmVm"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D4_v3"
+        },
+        "adminUsername": {
+            "value": "pieterlaurens"
+        },
+        "virtualNetworkName": {
+            "value": "SdmProductionSandbox-vnet"
+        },
+        "networkInterfaceName": {
+            "value": "pipelinesdmvm617"
+        },
+        "networkSecurityGroupName": {
+            "value": "PipelineSdmVm-nsg"
+        },
+        "adminPassword": {
+            "value": "Pieterlaurens!982"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "sdmproductionsandbox985"
+        },
+        "diagnosticsStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "Microsoft.Storage/storageAccounts/sdmproductionsandbox985"
+        },
+        "addressPrefix": {
+            "value": "10.0.1.0/24"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "subnetPrefix": {
+            "value": "10.0.1.0/24"
+        },
+        "publicIpAddressName": {
+            "value": "PipelineSdmVm-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "sqlConnectivityType": {
+            "value": "Public"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "sqlStorageDisksCount": {
+            "value": 1
+        },
+        "sqlStorageWorkloadType": {
+            "value": "GENERAL"
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": "NEW"
+        },
+        "sqlStorageStartingDeviceId": {
+            "value": 2
+        },
+        "sqlStorageDeploymentToken": {
+            "value": 19092
+        },
+        "sqlAutopatchingDayOfWeek": {
+            "value": "Sunday"
+        },
+        "sqlAutopatchingStartHour": {
+            "value": "2"
+        },
+        "sqlAutopatchingWindowDuration": {
+            "value": "60"
+        },
+        "sqlAuthenticationLogin": {
+            "value": "pieterlaurens"
+        },
+        "sqlAuthenticationPassword": {
+            "value": "Pieterlaurens!982"
+        },
+        "rServicesEnabled": {
+            "value": "false"
+        }
+    }
+}
