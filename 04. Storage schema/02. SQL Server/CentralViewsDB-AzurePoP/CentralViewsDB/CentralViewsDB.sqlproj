@@ -174,22 +174,16 @@
       <DefaultValue>sdd_v2017_002</DefaultValue>
       <Value>$(SqlCmdVar__110)</Value>
     </SqlCmdVariable>
-    <SqlCmdVariable Include="TopicDb">
-      <DefaultValue>p01155_TopicDb</DefaultValue>
-      <Value>$(SqlCmdVar__80)</Value>
+    <SqlCmdVariable Include="TopicDB">
+      <DefaultValue>TopicDB</DefaultValue>
+      <Value>$(SqlCmdVar__112)</Value>
     </SqlCmdVariable>
-    <SqlCmdVariable Include="TopicDbServer">
-      <DefaultValue>nlams00822</DefaultValue>
-      <Value>$(SqlCmdVar__81)</Value>
+    <SqlCmdVariable Include="TOpicDbServer">
+      <DefaultValue>TOpicDbServer</DefaultValue>
+      <Value>$(SqlCmdVar__113)</Value>
     </SqlCmdVariable>
   </ItemGroup>
   <ItemGroup>
-    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Release\topic\p01155_TopicDb\TopicDB.dacpac">
-      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Release\topic\p01155_TopicDb\TopicDB.dacpac</HintPath>
-      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
-      <DatabaseSqlCmdVariable>TopicDb</DatabaseSqlCmdVariable>
-      <ServerSqlCmdVariable>TopicDbServer</ServerSqlCmdVariable>
-    </ArtifactReference>
     <ArtifactReference Include="..\alpha_factors_dev.dacpac">
       <HintPath>..\alpha_factors_dev.dacpac</HintPath>
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
@@ -234,6 +228,12 @@
       <HintPath>..\idr_linktables_v2017_004.dacpac</HintPath>
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>idr_linktables_v2017_004</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="..\TopicDB.dacpac">
+      <HintPath>..\TopicDB.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>TopicDB</DatabaseSqlCmdVariable>
+      <ServerSqlCmdVariable>TOpicDbServer</ServerSqlCmdVariable>
     </ArtifactReference>
   </ItemGroup>
   <ItemGroup>
