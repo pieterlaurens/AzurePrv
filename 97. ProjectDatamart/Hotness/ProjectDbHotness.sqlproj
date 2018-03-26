@@ -89,18 +89,18 @@
       <DatabaseSqlCmdVariable>InvestorThemeDb</DatabaseSqlCmdVariable>
       <ServerSqlCmdVariable>InvestorThemeServer</ServerSqlCmdVariable>
     </ArtifactReference>
-    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Main\pw\pw\PatentsWork.dacpac">
-      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Main\pw\pw\PatentsWork.dacpac</HintPath>
+    <ArtifactReference Include="..\..\04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\pw_v2017a_001.dacpac">
+      <HintPath>..\..\04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\pw_v2017a_001.dacpac</HintPath>
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>PatentsWork</DatabaseSqlCmdVariable>
     </ArtifactReference>
-    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Main\pwc\pwc\PatentsWorkCompanies.dacpac">
-      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Main\pwc\pwc\PatentsWorkCompanies.dacpac</HintPath>
+    <ArtifactReference Include="..\..\04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\pwc_v2017a_001.dacpac">
+      <HintPath>..\..\04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\pwc_v2017a_001.dacpac</HintPath>
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>PatentsWorkCompanies</DatabaseSqlCmdVariable>
     </ArtifactReference>
-    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Main\scd\scd\StrategicCompanyData.dacpac">
-      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Main\scd\scd\StrategicCompanyData.dacpac</HintPath>
+    <ArtifactReference Include="..\..\04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\scd_v2017_005.dacpac">
+      <HintPath>..\..\04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\scd_v2017_005.dacpac</HintPath>
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>StrategicCompanyData</DatabaseSqlCmdVariable>
     </ArtifactReference>
@@ -123,20 +123,20 @@
       <Value>$(SqlCmdVar__23)</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="PatentsWork">
-      <DefaultValue>pw_v2016a_001</DefaultValue>
-      <Value>$(SqlCmdVar__33)</Value>
+      <DefaultValue>pw_v2017a_001</DefaultValue>
+      <Value>$(SqlCmdVar__36)</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="PatentsWorkCompanies">
-      <DefaultValue>pwc_v2016a_005</DefaultValue>
-      <Value>$(SqlCmdVar__34)</Value>
+      <DefaultValue>pwc_v2017a_001</DefaultValue>
+      <Value>$(SqlCmdVar__37)</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="publishYear">
       <DefaultValue>2016</DefaultValue>
       <Value>$(SqlCmdVar__28)</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="StrategicCompanyData">
-      <DefaultValue>scd_v2017_002</DefaultValue>
-      <Value>$(SqlCmdVar__35)</Value>
+      <DefaultValue>scd_v2017_005</DefaultValue>
+      <Value>$(SqlCmdVar__38)</Value>
     </SqlCmdVariable>
   </ItemGroup>
   <ItemGroup>

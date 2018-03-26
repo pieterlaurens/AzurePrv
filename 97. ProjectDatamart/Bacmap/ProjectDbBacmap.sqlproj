@@ -168,13 +168,13 @@
     </SqlCmdVariable>
   </ItemGroup>
   <ItemGroup>
-    <ArtifactReference Include="..\..\04. Storage schema\02. SQL Server\CentralViewsDB\CentralViewsDB\bin\Release\CentralViewsDB.dacpac">
-      <HintPath>..\..\04. Storage schema\02. SQL Server\CentralViewsDB\CentralViewsDB\bin\Release\CentralViewsDB.dacpac</HintPath>
+    <ArtifactReference Include="..\..\04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\CentralViewsDB\bin\Release\CentralViewsDB.dacpac">
+      <HintPath>..\..\04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\CentralViewsDB\bin\Release\CentralViewsDB.dacpac</HintPath>
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>DataHandlerDb</DatabaseSqlCmdVariable>
     </ArtifactReference>
-    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Release\bloomberg\bloomberg_v2017_002\bloomberg_v2017_002.dacpac">
-      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Release\bloomberg\bloomberg_v2017_002\bloomberg_v2017_002.dacpac</HintPath>
+    <ArtifactReference Include="bloomberg_v2017_002.dacpac">
+      <HintPath>bloomberg_v2017_002.dacpac</HintPath>
       <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
       <DatabaseSqlCmdVariable>bb_db</DatabaseSqlCmdVariable>
     </ArtifactReference>
