@@ -41,6 +41,10 @@
       <HintPath>..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Deloitte.PipelineFramework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=f9023a360de84b0c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Deloitte.PipelineFramework-AzurePoP\bin\Release\Deloitte.PipelineFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Newtonsoft.Json\v4.0_7.0.0.0__30ad4fe6b2a6aeed\Newtonsoft.Json.dll</HintPath>
@@ -65,12 +69,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Deloitte.PipelineFramework\PipelineFramework.csproj">
-      <Project>{77b47a0f-8124-4c22-9c0e-bd90f19a0c1f}</Project>
-      <Name>PipelineFramework</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
