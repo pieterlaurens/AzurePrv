@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseName>prv_dev_dth</TargetDatabaseName>
+    <DeployScriptFileName>CentralViewsDB.sql</DeployScriptFileName>
+    <TargetConnectionString>Data Source=nlams00859;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</TargetConnectionString>
+    <BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>
+    <ProfileVersionNumber>1</ProfileVersionNumber>
+    <DropObjectsNotInSource>True</DropObjectsNotInSource>
+    <DoNotDropLogins>True</DoNotDropLogins>
+    <DoNotDropLinkedServers>True</DoNotDropLinkedServers>
+    <DoNotDropLinkedServerLogins>True</DoNotDropLinkedServerLogins>
+    <DoNotDropFilegroups>True</DoNotDropFilegroups>
+    <DoNotDropFileTables>True</DoNotDropFileTables>
+    <DoNotDropRoleMembership>True</DoNotDropRoleMembership>
+    <DoNotDropSecurityPolicies>True</DoNotDropSecurityPolicies>
+    <DoNotDropXmlSchemaCollections>True</DoNotDropXmlSchemaCollections>
+    <DoNotDropUsers>True</DoNotDropUsers>
+    <DoNotDropSignatures>True</DoNotDropSignatures>
+    <DoNotDropServices>True</DoNotDropServices>
+    <DoNotDropServerTriggers>True</DoNotDropServerTriggers>
+    <DoNotDropServerRoles>True</DoNotDropServerRoles>
+    <DoNotDropServerRoleMembership>True</DoNotDropServerRoleMembership>
+    <DoNotDropServerAuditSpecifications>True</DoNotDropServerAuditSpecifications>
+    <DoNotDropRemoteServiceBindings>True</DoNotDropRemoteServiceBindings>
+    <DoNotDropPermissions>True</DoNotDropPermissions>
+    <DoNotDropPartitionSchemes>True</DoNotDropPartitionSchemes>
+    <DoNotDropPartitionFunctions>True</DoNotDropPartitionFunctions>
+    <DoNotDropMessageTypes>True</DoNotDropMessageTypes>
+    <DoNotDropEventSessions>True</DoNotDropEventSessions>
+    <DoNotDropEventNotifications>True</DoNotDropEventNotifications>
+    <DoNotDropErrorMessages>True</DoNotDropErrorMessages>
+    <DoNotDropEndpoints>True</DoNotDropEndpoints>
+    <DoNotDropDatabaseRoles>True</DoNotDropDatabaseRoles>
+    <DoNotDropDatabaseAuditSpecifications>True</DoNotDropDatabaseAuditSpecifications>
+    <DoNotDropCryptographicProviders>True</DoNotDropCryptographicProviders>
+    <DoNotDropCredentials>True</DoNotDropCredentials>
+    <DoNotDropCertificates>True</DoNotDropCertificates>
+    <DoNotDropApplicationRoles>True</DoNotDropApplicationRoles>
+    <DoNotDropAssemblies>True</DoNotDropAssemblies>
+    <DoNotDropAsymmetricKeys>True</DoNotDropAsymmetricKeys>
+    <DoNotDropAudits>True</DoNotDropAudits>
+    <DoNotDropBrokerPriorities>True</DoNotDropBrokerPriorities>
+    <DoNotDropAggregates>True</DoNotDropAggregates>
+    <DoNotDropColumnEncryptionKeys>True</DoNotDropColumnEncryptionKeys>
+    <DoNotDropContracts>True</DoNotDropContracts>
+    <DoNotDropColumnMasterKeys>True</DoNotDropColumnMasterKeys>
+  </PropertyGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="AlphaFactorsDB">
+      <Value>alpha_factors_dev</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="bloomberg_development">
+      <Value>bloomberg_development</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="bloomberg_v2017_001">
+      <Value>bloomberg_v2017_001</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="BuildVersion">
+      <Value>0</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="calendar_v2017_001">
+      <Value>calendar_v2017_001</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="french_data_library_v2017_003">
+      <Value>french_data_library_v2017_003</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="idr_linktables_v2017_004">
+      <Value>idr_linktables_v2017_004</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="nace_code_v2016_002">
+      <Value>nace_code_v2016_002</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="pwc_v2017a_001">
+      <Value>pwc_v2017a_001</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="pw_v2017a_001">
+      <Value>pw_v2017a_001</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="scd_v2017_003">
+      <Value>scd_v2017_003</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="scd_v2017_004">
+      <Value>scd_v2017_004</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="sdd_v2017_002">
+      <Value>sdd_v2017_002</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="TopicDb">
+      <Value>p01155_TopicDb</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="TopicDbServer">
+      <Value>nlams00822</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+</Project>

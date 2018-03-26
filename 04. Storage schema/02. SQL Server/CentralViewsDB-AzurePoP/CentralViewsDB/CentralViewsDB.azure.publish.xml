@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseName>prv_app_dth</TargetDatabaseName>
+    <DeployScriptFileName>CentralViewsDB.sql</DeployScriptFileName>
+    <TargetConnectionString>Data Source=Enginesql2016.westeurope.cloudapp.azure.com;Persist Security Info=True;User ID=engine_hack_remote_sql;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</TargetConnectionString>
+    <ProfileVersionNumber>1</ProfileVersionNumber>
+  </PropertyGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="idr_linktables_v2016_006">
+      <Value>idr_linktables_v2016_006</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="nace_code_v2016_002">
+      <Value>nace_code_v2016_002</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="pwc_v2016a_003">
+      <Value>pwc_v2016a_003</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="pw_v2016a_001">
+      <Value>pw_v2016a_001</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="scd_v2016_008">
+      <Value>scd_v2016_008</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="scd_v2016_008_derived_metrics">
+      <Value>scd_v2016_008_derived_metrics</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="sdd_v2016_005">
+      <Value>sdd_v2016_005</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+</Project>

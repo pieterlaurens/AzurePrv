@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseName>prv_dev_inh</TargetDatabaseName>
+    <DeployScriptFileName>PlatformDB.sql</DeployScriptFileName>
+    <TargetConnectionString>Data Source=nlagpdatacore;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</TargetConnectionString>
+    <ProfileVersionNumber>1</ProfileVersionNumber>
+    <ScriptDatabaseOptions>True</ScriptDatabaseOptions>
+    <BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>
+    <CreateNewDatabase>Tree</CreateNewDatabase>
+    <DeployDatabaseInSingleUserMode>False</DeployDatabaseInSingleUserMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="BuildVersion">
+      <Value>0</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="DeploymentServer">
+      <Value>nlagpdatacore</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="SsisProjectName">
+      <Value>PRV-dev</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+</Project>
