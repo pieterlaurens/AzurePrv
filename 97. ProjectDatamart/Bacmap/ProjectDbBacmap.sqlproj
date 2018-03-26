@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ProjectDbBacmap</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{12522eda-fb35-4954-819f-d78497081105}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>BloombRev_proj</RootNamespace>
+    <AssemblyName>BloombRev_proj</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <TargetDatabase>ProjectDbBacmap</TargetDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="report" />
+    <Folder Include="report\procedures" />
+    <Folder Include="report\tables" />
+    <Folder Include="Scripts" />
+    <Folder Include="0. DacPac" />
+    <Folder Include="1. SchemaCompare" />
+    <Folder Include="2. Deprecated code" />
+    <Folder Include="3. Data" />
+    <Folder Include="Security" />
+    <Folder Include="score" />
+    <Folder Include="temp" />
+    <Folder Include="temp\tables" />
+    <Folder Include="score\functions" />
+    <Folder Include="bacmap" />
+    <Folder Include="bacmap\functions" />
+    <Folder Include="bacmap\procedures" />
+    <Folder Include="bacmap\tables" />
+    <Folder Include="bacmap\views" />
+    <Folder Include="score\procedures" />
+    <Folder Include="score\tables" />
+    <Folder Include="score\user defined tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="report\procedures\postDeploymentParams.sql" />
+    <None Include="1. SchemaCompare\SqlSchemaCompareProject2Db.scmp" />
+    <None Include="3. Data\SDImapping_V14032017.xlsx" />
+    <None Include="Scripts\takeDevDbsOffline.sql" />
+    <None Include="3. Data\SDImapping_unverified_with_client.xlsx" />
+    <None Include="ProjectDbBacmap.publish.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ProjectDbBacmap.debug.publish.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="report\procedures\postLogEntry.sql" />
+    <Build Include="report\tables\deployment_parameters.sql" />
+    <Build Include="report\tables\event_log.sql" />
+    <Build Include="report\report.sql" />
+    <None Include="report\00.READ_ME.sql" />
+    <None Include="report\01.BUILD.sql" />
+    <None Include="Scripts\DropAllDbItems.sql" />
+    <None Include="Scripts\ExampleScript.sql" />
+    <None Include="Scripts\Scrapbook.sql" />
+    <Build Include="Security\eng.sql" />
+    <None Include="Scripts\TestViews.sql" />
+    <Build Include="report\tables\mapping_action_type.sql" />
+    <Build Include="report\tables\mapping_action.sql" />
+    <Build Include="temp\temp.sql" />
+    <Build Include="temp\tables\sdi_categories.sql" />
+    <Build Include="report\tables\custom_mapping_history.sql" />
+    <None Include="Scripts\Scrapbook_SDIscore.sql" />
+    <Build Include="bacmap\functions\getEntityIdFromBvd.sql" />
+    <Build Include="bacmap\functions\getEntityLabelFromBvd.sql" />
+    <Build Include="bacmap\functions\getEntityMapping.sql" />
+    <Build Include="bacmap\functions\getEntityMappingStatus.sql" />
+    <Build Include="bacmap\procedures\lineItemMapping_delete.sql" />
+    <Build Include="bacmap\procedures\lineItemMapping_modify.sql" />
+    <Build Include="bacmap\procedures\segmentationMapping_copy.sql" />
+    <Build Include="bacmap\tables\custom_mapping.sql" />
+    <Build Include="bacmap\tables\custom_mapping_entity_status.sql" />
+    <Build Include="bacmap\tables\line_item_custom_mapping.sql" />
+    <Build Include="bacmap\views\entity_links.sql" />
+    <Build Include="bacmap\views\period.sql" />
+    <Build Include="bacmap\bacmap.sql" />
+    <Build Include="score\functions\calculate_mapping_fraction.sql" />
+    <Build Include="score\functions\calculate_sdi_score.sql" />
+    <Build Include="score\functions\score_segmentation_algorithm.sql" />
+    <Build Include="score\procedures\entity_sdi_score_modify.sql" />
+    <Build Include="score\tables\entity_sdi_score.sql" />
+    <Build Include="score\user defined tables\sdi_score_table.sql" />
+    <Build Include="score\user defined tables\sdi_score_table_for_entity.sql" />
+    <Build Include="score\score.sql" />
+    <Build Include="bacmap\tables\mapping_status.sql" />
+    <None Include="bacmap\functions\getEntitySegmentation.sql" />
+    <Build Include="bacmap\procedures\segmentationMapping_isFinished.sql" />
+    <Build Include="score\procedures\newScoreTable_load.sql" />
+    <None Include="2. Deprecated code\01.IMPORT MAPPING.sql" />
+    <Build Include="score\functions\score_sdi_bonus_algorithm.sql" />
+    <Build Include="score\functions\score_technology_get.sql" />
+    <Build Include="score\functions\score_calculated_total_algorithm.sql" />
+    <Build Include="score\functions\score_manual_get.sql" />
+    <Build Include="score\functions\score_sdi_algorithm.sql" />
+    <Build Include="2. Deprecated code\calculate_score.sql" />
+    <Build Include="2. Deprecated code\custom_mapping_score.sql" />
+    <Build Include="2. Deprecated code\entity_period_mapping_status.sql" />
+    <Build Include="bacmap\functions\getEntitySegmentation_v2.sql" />
+    <None Include="2. Deprecated code\score_mapping_tables_load.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="bb_db">
+      <DefaultValue>bloomberg_v2017_002</DefaultValue>
+      <Value>$(SqlCmdVar__47)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="DataHandlerDb">
+      <DefaultValue>prv_dev_dth</DefaultValue>
+      <Value>$(SqlCmdVar__45)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="ProjectDbQuestionnaire">
+      <DefaultValue>ProjectDbQuestionnaire</DefaultValue>
+      <Value>$(SqlCmdVar__46)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="..\..\04. Storage schema\02. SQL Server\CentralViewsDB\CentralViewsDB\bin\Release\CentralViewsDB.dacpac">
+      <HintPath>..\..\04. Storage schema\02. SQL Server\CentralViewsDB\CentralViewsDB\bin\Release\CentralViewsDB.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>DataHandlerDb</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Release\bloomberg\bloomberg_v2017_002\bloomberg_v2017_002.dacpac">
+      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Release\bloomberg\bloomberg_v2017_002\bloomberg_v2017_002.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>bb_db</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Questionnaire\ProjectDbQuestionnaire.sqlproj">
+      <Name>ProjectDbQuestionnaire</Name>
+      <Project>{85c7a406-544a-4e8a-abe0-394aece711f7}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>ProjectDbQuestionnaire</DatabaseSqlCmdVariable>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

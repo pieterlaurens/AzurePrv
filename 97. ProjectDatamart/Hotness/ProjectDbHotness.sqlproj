@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ProjectDbHotness</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{faa88f73-c16b-4314-9de7-fb27869747e3}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CompanyHotness</RootNamespace>
+    <AssemblyName>CompanyHotness</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Storage\" />
+    <Folder Include="Matlab" />
+    <Folder Include="Scripts" />
+    <Folder Include="report" />
+    <Folder Include="dashboards" />
+    <Folder Include="hotness" />
+    <Folder Include="hotness\Stored procedures" />
+    <Folder Include="hotness\Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\PostDeployment.sql" />
+    <Build Include="report\strategic_source_db.sql" />
+    <Build Include="report\report.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="p01155_TopicDB.dacpac">
+      <HintPath>p01155_TopicDB.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>FrontierTechnologyDb</DatabaseSqlCmdVariable>
+      <ServerSqlCmdVariable>FrontierTechnologyServer</ServerSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="p00128_TopicDB.dacpac">
+      <HintPath>p00128_TopicDB.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>InvestorThemeDb</DatabaseSqlCmdVariable>
+      <ServerSqlCmdVariable>InvestorThemeServer</ServerSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Main\pw\pw\PatentsWork.dacpac">
+      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Main\pw\pw\PatentsWork.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>PatentsWork</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Main\pwc\pwc\PatentsWorkCompanies.dacpac">
+      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Main\pwc\pwc\PatentsWorkCompanies.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>PatentsWorkCompanies</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+    <ArtifactReference Include="\\nl\data\DataCore\AppStore\EngineLibrary\Main\scd\scd\StrategicCompanyData.dacpac">
+      <HintPath>\\nl\data\DataCore\AppStore\EngineLibrary\Main\scd\scd\StrategicCompanyData.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>StrategicCompanyData</DatabaseSqlCmdVariable>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="FrontierTechnologyDb">
+      <DefaultValue>p01155_TopicDB</DefaultValue>
+      <Value>$(SqlCmdVar__20)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="FrontierTechnologyServer">
+      <DefaultValue>nlams00822</DefaultValue>
+      <Value>$(SqlCmdVar__21)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="InvestorThemeDb">
+      <DefaultValue>p00128_TopicDB</DefaultValue>
+      <Value>$(SqlCmdVar__22)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="InvestorThemeServer">
+      <DefaultValue>nlams00822</DefaultValue>
+      <Value>$(SqlCmdVar__23)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="PatentsWork">
+      <DefaultValue>pw_v2016a_001</DefaultValue>
+      <Value>$(SqlCmdVar__33)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="PatentsWorkCompanies">
+      <DefaultValue>pwc_v2016a_005</DefaultValue>
+      <Value>$(SqlCmdVar__34)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="publishYear">
+      <DefaultValue>2016</DefaultValue>
+      <Value>$(SqlCmdVar__28)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="StrategicCompanyData">
+      <DefaultValue>scd_v2017_002</DefaultValue>
+      <Value>$(SqlCmdVar__35)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Matlab\AnalyzeTechnologyHotness.m" />
+    <None Include="Matlab\AnalyzeTechnologyTopicQuality.m" />
+    <None Include="Matlab\plotTopicQuality.m" />
+    <None Include="dashboards\CompanyTechnologyHotness.xlsx" />
+    <None Include="dashboards\getCompanyMetrics.sql" />
+    <None Include="ProjectDbHotness.publish.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="hotness\Stored procedures\GetCompanyScore.sql" />
+    <Build Include="hotness\Stored procedures\GetTechnologyHotnessTablesForMatlab.sql" />
+    <Build Include="hotness\Stored procedures\log_addEntry.sql" />
+    <Build Include="hotness\Tables\company.sql" />
+    <Build Include="hotness\Tables\company_composition.sql" />
+    <Build Include="hotness\Tables\investor_preference.sql" />
+    <Build Include="hotness\Tables\investor_preference_family.sql" />
+    <Build Include="hotness\Tables\log.sql" />
+    <Build Include="hotness\Tables\technology.sql" />
+    <Build Include="hotness\Tables\technology_family.sql" />
+    <Build Include="hotness\hotness.sql" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

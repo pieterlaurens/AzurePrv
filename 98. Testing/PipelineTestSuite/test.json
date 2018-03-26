@@ -1,0 +1,127 @@
+{"Header":{
+	"NameOfApi":"CreateLonglist",
+	"Creator":"pbaljon@deloitte.nl",
+	"ConfigurationDescription":"",
+	"ConfigurationVersion":"",
+},"ComponentParams" : [ 
+{ "PackageName":"CreatePrepareEnvironment"}
+, { "PackageName":"CompanyRetrieval"
+	, "RetrievalParams" : [
+		{"RetrievalType" : "BasicConstraints"
+			, "RetrievalLabel" : "Dutch listed"
+			, "NumberOfCompanies" : 5
+			, "Constraints" : "country:NL|listed:Listed|age:48"
+		},{"RetrievalType" : "CompanyTextBagOfWords"
+			, "RetrievalLabel" : "Business - AM"
+			, "NumberOfCompanies" : 5
+			, "Normalize" : "None"
+			, "Constraints" : ""
+			, "BagOfWords" : "additive manuf*|3d print*"
+		},{"RetrievalType" : "TopicScore"
+			, "RetrievalLabel" : "PAT.Composite"
+			, "NumberOfCompanies" : 5
+			, "Normalize" : "None"
+			, "Constraints" : ""
+			, "TopicName" : "Advanced composite"
+			, "TopicCorpus" : "Patents"
+		},{"RetrievalType" : "TopicScore"
+			, "RetrievalLabel" : "TRD.Composite"
+			, "NumberOfCompanies" : 5
+			, "Normalize" : "None"
+			, "Constraints" : ""
+			, "TopicName" : "Advanced composite"
+			, "TopicCorpus" : "Trade"
+		},{"RetrievalType" : "TopicScore"
+			, "RetrievalLabel" : "WEB.Composite"
+			, "NumberOfCompanies" : 5
+			, "Normalize" : "None"
+			, "Constraints" : ""
+			, "TopicName" : "Advanced composite"
+			, "TopicCorpus" : "Website"
+		},{"RetrievalType" : "CompanyList"
+			, "RetrievalLabel" : "Marked companies"
+			, "CompanyId" : "USD305504941D|DE2010000581|JP000000843JPN|JP000000746JPN|JP000001066JPN"
+		},{ "RetrievalType" : "PatentClassProfile"
+			, "RetrievalLabel" : "IP - AM"
+			, "NumberOfCompanies" : 5
+			, "Normalize" : "None"
+			, "ClassProfile" : "B33Y 30/00:0.32|B33Y 70/00:0.254545|B33Y 80/00:0.423423"
+			, "Constraints" : "country:US"
+		},{"RetrievalType" : "CompanyTextBagOfWords"
+			, "RetrievalLabel" : "Business - AM wildcard"
+			, "NumberOfCompanies" : 5
+			, "Normalize" : "None"
+			, "BagOfWords" : "#additive manuf*# OR #3d print*#"
+			, "Constraints" : "country:US"
+		}
+	]
+	}
+, { "PackageName":"CompanyScoring"
+	, "ScoringParams" : [
+		{"ScoringType" : "OrbisAttribute"
+		, "ScoringLabel" : "Country"
+		, "AttributeName" : "country"
+		},{
+		"ScoringType" : "OrbisAttribute"
+		, "ScoringLabel" : "Age"
+		, "AttributeName" : "age"
+		},{
+		"ScoringType" : "IndustryAttribute"
+		, "ScoringLabel" : "Industry"
+		},{
+		"ScoringType" : "PatentClassProfile"
+		, "ScoringLabel" : "IP - AM"
+		, "Normalize" : "Portfolio"
+		, "ClassProfile" : "B33Y 30/00:0.32|B33Y 70/00:0.254545|B33Y 80/00:0.423423"
+		},{
+		"ScoringType" : "TopicScore"
+		, "ScoringLabel" : "Topic - AM"
+		, "TopicCorpus" : "Patents"
+		, "TopicName" : "Additive manufacturing"
+		},{
+		"ScoringType" : "TopicScore"
+		, "ScoringLabel" : "PAT.Composite"
+		, "TopicCorpus" : "Patents"
+		, "TopicName" : "Advanced composite"
+		},{
+		"ScoringType" : "TopicScore"
+		, "ScoringLabel" : "WEB.Composite"
+		, "TopicCorpus" : "Website"
+		, "TopicName" : "Advanced composite"
+		},{
+		"ScoringType" : "TopicScore"
+		, "ScoringLabel" : "TRD.Composite"
+		, "TopicCorpus" : "Trade"
+		, "TopicName" : "Advanced composite"
+		},{
+		"ScoringType" : "CompanyTextBagOfWords"
+		, "ScoringLabel" : "Business - AM"
+		, "Normalize" : "Portfolio"
+		, "BagOfWords" : "additive manuf*|3d print*"
+		},{
+		"ScoringType" : "ManualScore"
+		, "ScoringLabel" : "Future Impact"
+		, "ScoreDataType" : "nvarchar"
+		, "CompanyScore" : "USD305504941D:High, developing extensive wind-power IP|DE2010000581:Low but dont care"
+		},{
+		"ScoringType" : "ManualScore"
+		, "ScoringLabel" : "Numeric Future Impact"
+		, "ScoreDataType" : "real"
+		, "CompanyScore" : "USD305504941D:9.123|DE2010000581:5"
+		},{
+		"ScoringType" : "OrbisTemporalAttribute"
+		, "ScoringLabel" : "Goodwill"
+		, "AttributeName" : "goodwill"
+		, "TimeAttributeType" : "int"
+		, "TimeRange" : "2005-2016"
+		},{
+		"ScoringType" : "OrbisTemporalAttribute"
+		, "ScoringLabel" : "Bank loans"
+		, "AttributeName" : "bank_loans"
+		, "TimeAttributeType" : "real"
+		, "TimeRange" : "2005-2016"
+		}
+	]
+	}
+, { "PackageName":"PrepareForVisualization"}
+	]}

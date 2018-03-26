@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ProjectDbLonglist</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{1869f7ef-a50a-404d-ba41-17ea828b8d63}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>ProjectDb</RootNamespace>
+    <AssemblyName>ProjectDb</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="report" />
+    <Folder Include="report\Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\tile_timeseries.sql" />
+    <Build Include="dbo\Tables\tile_profile.sql" />
+    <Build Include="dbo\Tables\tile_event_stream.sql" />
+    <Build Include="dbo\Tables\tile_attribute.sql" />
+    <Build Include="dbo\Tables\scored_company.sql" />
+    <Build Include="dbo\Tables\manual_scoring_action.sql" />
+    <Build Include="dbo\Tables\longlist_histograms.sql" />
+    <Build Include="dbo\Tables\focus_list_company.sql" />
+    <Build Include="dbo\Tables\focus_list.sql" />
+    <Build Include="dbo\Tables\company_time_score_real.sql" />
+    <Build Include="dbo\Tables\company_time_score_int.sql" />
+    <Build Include="dbo\Tables\company_score_str.sql" />
+    <Build Include="dbo\Tables\company_score_real.sql" />
+    <Build Include="dbo\Tables\company_score_int.sql" />
+    <Build Include="dbo\Tables\company_score.sql" />
+    <Build Include="dbo\Tables\company_long_list.sql" />
+    <Build Include="dbo\Views\DEF_OBJECTNAMES_WEB.sql" />
+    <Build Include="dbo\Functions\onFocusList.sql" />
+    <Build Include="dbo\Stored Procedures\web_getLonglistStats.sql" />
+    <Build Include="dbo\Stored Procedures\web_getLonglistHistograms.sql" />
+    <Build Include="dbo\Tables\longlist_column_groups.sql" />
+    <Build Include="dbo\Views\DEF_COMPANYLONGLIST_FILTERS.sql" />
+    <Build Include="dbo\Views\DEF_COLUMN_GROUPS.sql" />
+    <Build Include="dbo\Stored Procedures\companiesOnFocuslist.sql" />
+    <Build Include="report\Tables\requested_profile.sql" />
+    <Build Include="report\Tables\test_report.sql" />
+    <Build Include="report\report.sql" />
+    <Build Include="dbo\Views\DEF_TEMPORAL_OBJECTNAMES_WEB.sql" />
+    <Build Include="report\Tables\dq_stats.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProjectDbLonglist.publish.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

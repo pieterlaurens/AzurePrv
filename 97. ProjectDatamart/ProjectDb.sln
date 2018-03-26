@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectDbHotness", "Hotness\ProjectDbHotness.sqlproj", "{FAA88F73-C16B-4314-9DE7-FB27869747E3}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectDbLandscape", "Landscape\ProjectDbLandscape.sqlproj", "{704793BD-597D-41CB-97D4-DE0EB0005D5D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectDbLonglist", "Longlist\ProjectDbLonglist.sqlproj", "{1869F7EF-A50A-404D-BA41-17EA828B8D63}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectDbQuestionnaire", "Questionnaire\ProjectDbQuestionnaire.sqlproj", "{85C7A406-544A-4E8A-ABE0-394AECE711F7}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectDbBacmap", "Bacmap\ProjectDbBacmap.sqlproj", "{12522EDA-FB35-4954-819F-D78497081105}"
+EndProject
+Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "DeployProjectDb", "DeployProjectDb\DeployProjectDb.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDbUnitTest", "ProjectDbUnitTest\ProjectDbUnitTest.csproj", "{C30FFF7E-600A-464E-9D97-B34F663CE2D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAA88F73-C16B-4314-9DE7-FB27869747E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA88F73-C16B-4314-9DE7-FB27869747E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA88F73-C16B-4314-9DE7-FB27869747E3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FAA88F73-C16B-4314-9DE7-FB27869747E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA88F73-C16B-4314-9DE7-FB27869747E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA88F73-C16B-4314-9DE7-FB27869747E3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{704793BD-597D-41CB-97D4-DE0EB0005D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{704793BD-597D-41CB-97D4-DE0EB0005D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{704793BD-597D-41CB-97D4-DE0EB0005D5D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{704793BD-597D-41CB-97D4-DE0EB0005D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{704793BD-597D-41CB-97D4-DE0EB0005D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{704793BD-597D-41CB-97D4-DE0EB0005D5D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1869F7EF-A50A-404D-BA41-17EA828B8D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1869F7EF-A50A-404D-BA41-17EA828B8D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1869F7EF-A50A-404D-BA41-17EA828B8D63}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1869F7EF-A50A-404D-BA41-17EA828B8D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1869F7EF-A50A-404D-BA41-17EA828B8D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1869F7EF-A50A-404D-BA41-17EA828B8D63}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{85C7A406-544A-4E8A-ABE0-394AECE711F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85C7A406-544A-4E8A-ABE0-394AECE711F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85C7A406-544A-4E8A-ABE0-394AECE711F7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{85C7A406-544A-4E8A-ABE0-394AECE711F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85C7A406-544A-4E8A-ABE0-394AECE711F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85C7A406-544A-4E8A-ABE0-394AECE711F7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{12522EDA-FB35-4954-819F-D78497081105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12522EDA-FB35-4954-819F-D78497081105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12522EDA-FB35-4954-819F-D78497081105}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{12522EDA-FB35-4954-819F-D78497081105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12522EDA-FB35-4954-819F-D78497081105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12522EDA-FB35-4954-819F-D78497081105}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30FFF7E-600A-464E-9D97-B34F663CE2D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30FFF7E-600A-464E-9D97-B34F663CE2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30FFF7E-600A-464E-9D97-B34F663CE2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30FFF7E-600A-464E-9D97-B34F663CE2D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E32E9269-9E39-48E6-B1BA-4EE6E26E7285}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.nl.deloitte.com/tfs/engine
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Hotness\\ProjectDbHotness.sqlproj
+		SccProjectName1 = Hotness
+		SccLocalPath1 = Hotness
+		SccProjectUniqueName2 = Landscape\\ProjectDbLandscape.sqlproj
+		SccProjectName2 = Landscape
+		SccLocalPath2 = Landscape
+		SccProjectUniqueName3 = Longlist\\ProjectDbLonglist.sqlproj
+		SccProjectName3 = Longlist
+		SccLocalPath3 = Longlist
+		SccProjectUniqueName4 = Questionnaire\\ProjectDbQuestionnaire.sqlproj
+		SccProjectName4 = Questionnaire
+		SccLocalPath4 = Questionnaire
+		SccProjectUniqueName5 = Bacmap\\ProjectDbBacmap.sqlproj
+		SccProjectName5 = Bacmap
+		SccLocalPath5 = Bacmap
+		SccProjectUniqueName6 = DeployProjectDb\\DeployProjectDb.pssproj
+		SccProjectName6 = DeployProjectDb
+		SccLocalPath6 = DeployProjectDb
+		SccProjectUniqueName7 = ProjectDbUnitTest\\ProjectDbUnitTest.csproj
+		SccProjectName7 = ProjectDbUnitTest
+		SccLocalPath7 = ProjectDbUnitTest
+	EndGlobalSection
+EndGlobal
