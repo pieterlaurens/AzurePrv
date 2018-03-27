@@ -6,9 +6,18 @@
 Import-Module SqlServer
 
 Write-Output "==================== Preparation: Setting global variables"
-$TargetSqlServer   = "equip-pop-vm"#$args[0] # nlams00859, nlagpdatacore, etc.
-$BuildConfiguration = "Release"#$args[1] #Release or Debug; only applies to project DB
-$BuildVersion = 1#$args[2]
+#$TargetSqlServer   = "equip-pop-vm"#$args[0] # nlams00859, nlagpdatacore, etc.
+#$BuildConfiguration = "Release"#$args[1] #Release or Debug; only applies to project DB
+#$BuildVersion = 1#$args[2]
+
+$TargetSqlServer   = $args[0] # nlams00859, nlagpdatacore, etc.
+$BuildConfiguration = $args[1] #Release or Debug; only applies to project DB
+$BuildVersion = $args[2]
+
+
+#param([string]$TargetSqlServer="nlams00859")# $args[0] # nlams00859, nlagpdatacore, etc.
+#param([string]$BuildConfiguration="Release")# $args[0] # nlams00859, nlagpdatacore, etc.
+#param([Int32]$BuildVersion=0)# $args[0] # nlams00859, nlagpdatacore, etc.
 
 #$sqlPackage = "C:\Program Files (x86)\Microsoft SQL Server\130\DAC\bin\sqlpackage.exe"
 $sqlPackage = "C:\Program Files (x86)\Microsoft Visual Studio\2017\SQL\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\140\sqlpackage.exe"
@@ -16,7 +25,7 @@ $sqlPackage = "C:\Program Files (x86)\Microsoft Visual Studio\2017\SQL\Common7\I
 # 1b. publish Data Handler
 Write-Output "==================== Step 1: Publish Data Handlers DB"
 $dthDacPacSource = "04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\CentralViewsDB\bin\Release\CentralViewsDB.dacpac"
-$dthProfile = "01. Main\04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\CentralViewsDB\CentralViewsDB.dev.publish.xml"
+$dthProfile = "04. Storage schema\02. SQL Server\CentralViewsDB-AzurePoP\CentralViewsDB\CentralViewsDB.azurevm.publish.xml"
 Invoke-Sqlcmd -Query "IF(DB_ID('prv_tst_dth') is not null) BEGIN alter database prv_tst_dth set single_user with rollback immediate; DROP DATABASE prv_tst_dth END" -ServerInstance $TargetSqlServer
 & $sqlPackage /Action:Publish /tsn:"$TargetSqlServer" /tdn:prv_tst_dth /sf:$dthDacPacSource /profile:$dthProfile  /v:BuildVersion=$BuildVersion
 
