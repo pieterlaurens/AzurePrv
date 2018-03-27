@@ -5,10 +5,12 @@
     <TargetDatabaseName>prv_dev_dth</TargetDatabaseName>
     <DeployScriptFileName>CentralViewsDB.sql</DeployScriptFileName>
     <ProfileVersionNumber>1</ProfileVersionNumber>
-    <TargetConnectionString>Data Source=13.95.70.25;Persist Security Info=False;User ID=entisadmin;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=True;TrustServerCertificate=True</TargetConnectionString>
   </PropertyGroup>
   <ItemGroup>
     <SqlCmdVariable Include="AlphaFactorsDB">
+      <Value>alpha_factors_dev</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="alpha_factors_dev">
       <Value>alpha_factors_dev</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="bloomberg_development">
@@ -24,6 +26,9 @@
       <Value>calendar_v2017_001</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="french_data_library_v2017_003">
+      <Value>french_data_library_v2017_004</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="french_data_library_v2017_004">
       <Value>french_data_library_v2017_004</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="idr_linktables_v2017_004">
@@ -44,6 +49,9 @@
     <SqlCmdVariable Include="scd_v2017_004">
       <Value>scd_v2017_005</Value>
     </SqlCmdVariable>
+    <SqlCmdVariable Include="scd_v2017_005">
+      <Value>scd_v2017_005</Value>
+    </SqlCmdVariable>
     <SqlCmdVariable Include="sdd_v2017_002">
       <Value>sdd_v2017_002</Value>
     </SqlCmdVariable>
@@ -51,7 +59,7 @@
       <Value>p01155_TopicDb</Value>
     </SqlCmdVariable>
     <SqlCmdVariable Include="TopicDbServer">
-      <Value>alpha-pop-vm.entis.ai</Value>
+      <Value>equip-pop-vm.entis.ai</Value>
     </SqlCmdVariable>
   </ItemGroup>
 </Project>
