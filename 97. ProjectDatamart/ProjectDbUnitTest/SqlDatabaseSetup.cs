@@ -11,7 +11,6 @@ namespace ProjectDbUnitTest
     [TestClass()]
     public class SqlDatabaseSetup
     {
-
         [AssemblyInitialize()]
         public static void InitializeAssembly(TestContext ctx)
         {

@@ -12,7 +12,6 @@ namespace ProjectDbUnitTest
     [TestClass()]
     public class BacmapTest : SqlDatabaseTestClass
     {
-
         public BacmapTest()
         {
             InitializeComponent();
@@ -22,6 +21,7 @@ namespace ProjectDbUnitTest
         public void TestInitialize()
         {
             base.InitializeTest();
+            //TestContext.DataConnection.ChangeDatabase("equip-pop-vm.entis.ai");
         }
         [TestCleanup()]
         public void TestCleanup()
