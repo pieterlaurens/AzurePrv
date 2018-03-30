@@ -849,7 +849,7 @@ namespace DatahandlerUnitTest
         //
         #endregion
 
-        [TestMethod()]
+        [TestMethod(), Timeout(60000)]
         public void volpe_ufn_company_textTest()
         {
             SqlDatabaseTestActions testActions = this.volpe_ufn_company_textTestData;

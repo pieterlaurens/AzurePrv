@@ -761,7 +761,7 @@ namespace DatahandlerUnitTest
         //
         #endregion
 
-        [TestMethod()]
+        [TestMethod(), Timeout(60000)]
         public void latest_ufn_company_textTest()
         {
             SqlDatabaseTestActions testActions = this.latest_ufn_company_textTestData;
